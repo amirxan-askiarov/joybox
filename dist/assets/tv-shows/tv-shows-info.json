@@ -1,0 +1,269 @@
+[
+  {
+    "title": "The Director's Journey",
+    "category": "Documentary",
+    "description": "A five-part documentary series offering an intimate look at the life and career of legendary filmmaker Martin Scorsese, featuring interviews with his closest collaborators.",
+    "age-restriction": "15+",
+    "link": "assets/tv-shows/TheDirectorsJourney.jpeg"
+  },
+  {
+    "title": "The Man Behind the Laughs",
+    "category": "Documentary",
+    "description": "A heartfelt documentary about comedian Paul Reubens, exploring his life and the creation of his iconic character, Pee-wee Herman.",
+    "age-restriction": "12+",
+    "link": "assets/tv-shows/TheManBehindTheLaughs.jpeg"
+  },
+  {
+    "title": "Hearts in Harmony",
+    "category": "Documentary",
+    "description": "An Emmy-winning reality series following individuals on the autism spectrum as they navigate the complexities of dating and relationships.",
+    "age-restriction": "12+",
+    "link": "assets/tv-shows/HeartsInHarmony.jpeg"
+  },
+  {
+    "title": "Riding the Giants",
+    "category": "Documentary",
+    "description": "A thrilling documentary series chronicling the pursuit of the world's largest waves, capturing the courage and challenges faced by elite surfers.",
+    "age-restriction": "15+",
+    "link": "assets/tv-shows/RidingTheGiants.jpeg"
+  },
+  {
+    "title": "Influencer Diaries",
+    "category": "Documentary",
+    "description": "An intimate six-part series offering a glimpse into the life of influencer and entrepreneur Molly-Mae Hague, showcasing her personal and professional journey.",
+    "age-restriction": "12+",
+    "link": "assets/tv-shows/InfluencerDiaries.jpeg"
+  },
+  {
+    "title": "Stardom",
+    "category": "Documentary",
+    "description": "A comprehensive documentary tracing Taylor Swift's rise from a Nashville teenager to a global music icon, featuring insights from journalists and fans.",
+    "age-restriction": "12+",
+    "link": "assets/tv-shows/Stardom.jpeg"
+  },
+    {
+    "title": "Mind Divide",
+    "category": "Drama",
+    "description": "A psychological drama exploring the consequences of work-life balance through a radical corporate experiment. The second season earned 27 Emmy nominations in 2025.",
+    "age-restriction": "16+",
+    "link": "assets/tv-shows/MindDivide.jpeg"
+  },
+  {
+    "title": "Resort Secrets",
+    "category": "Drama",
+    "description": "An anthology series delving into the lives of guests and staff at luxury resorts. Season 3 received 23 Emmy nominations in 2025.",
+    "age-restriction": "16+",
+    "link": "assets/tv-shows/ResortSecrets.jpeg"
+  },
+  {
+    "title": "Edinburgh Shadows",
+    "category": "Drama",
+    "description": "A BBC crime drama reboot set in Edinburgh, following Detective Sergeant John Rebus as he navigates the city's criminal underworld. The series garnered critical acclaim and a 100% rating on Rotten Tomatoes.",
+    "age-restriction": "16+",
+    "link": "assets/tv-shows/EdinburghShadows.jpeg"
+  },
+  {
+    "title": "Silent Paths",
+    "category": "Drama",
+    "description": "A British drama miniseries about a deaf man seeking to uncover the events leading to his imprisonment. The cast and crew primarily use British Sign Language.",
+    "age-restriction": "15+",
+    "link": "assets/tv-shows/SilentPaths.jpeg"
+  },
+  {
+    "title": "Summer Hearts",
+    "category": "Drama",
+    "description": "A romantic teen drama set in 2018 Los Angeles, exploring the lives of two young athletes navigating love and family pressures. The series was renewed for a second season shortly after its release.",
+    "age-restriction": "12+",
+    "link": "assets/tv-shows/SummerHearts.jpeg"
+  },
+  {
+    "title": "Crime Syndicate",
+    "category": "Drama",
+    "description": "A crime drama series that delves into the complexities of organized crime, featuring compelling performances and intricate storytelling.",
+    "age-restriction": "16+",
+    "link": "assets/tv-shows/CrimeSyndicate.jpeg"
+  },
+  {
+    "title": "Hidden Tracks",
+    "category": "Drama",
+    "description": "A semi-autobiographical drama by Richard Gadd, leading the 2025 TV Bafta nominations with eight nominations, including best limited drama and best leading actor.",
+    "age-restriction": "16+",
+    "link": "assets/tv-shows/HiddenTracks.jpeg"
+  },
+  {
+    "title": "Global Affairs",
+    "category": "Drama",
+    "description": "A political drama series following the complexities of international diplomacy and personal relationships. The second season returned to critical acclaim in 2025.",
+    "age-restriction": "16+",
+    "link": "assets/tv-shows/GlobalAffairs.jpeg"
+  },
+    {
+    "title": "The Dozen Heroes",
+    "category": "Fantasy",
+    "description": "A South Korean fantasy action superhero series about twelve individuals who gain extraordinary powers and must navigate the challenges that come with them.",
+    "age-restriction": "15+",
+    "link": "assets/tv-shows/TheDozenHeroes.jpeg"
+  },
+  {
+    "title": "Shadow Line",
+    "category": "Fantasy",
+    "description": "A dark fantasy crime thriller series based on a Naver webtoon, exploring the secrets and mysteries surrounding a high school with supernatural elements.",
+    "age-restriction": "16+",
+    "link": "assets/tv-shows/ShadowLine.jpeg"
+  },
+  {
+    "title": "Enchanted Manor",
+    "category": "Fantasy",
+    "description": "A romantic fantasy period drama set in the Joseon era, blending elements of romance, comedy, and fantasy as it follows the lives of its characters.",
+    "age-restriction": "13+",
+    "link": "assets/tv-shows/EnchantedManor.jpeg"
+  },
+  {
+    "title": "Zombie Heartlands",
+    "category": "Fantasy",
+    "description": "A South Korean romantic fantasy zombie comedy series where a couple attempts to reunite during a zombie outbreak overtaking South Korea.",
+    "age-restriction": "14+",
+    "link": "assets/tv-shows/ZombieHeartlands.jpeg"
+  },
+  {
+    "title": "The Tall Knight",
+    "category": "Fantasy",
+    "description": "A prequel to 'Game of Thrones' focusing on the adventures of Ser Duncan the Tall and his squire, Egg, set in the world of Westeros.",
+    "age-restriction": "16+",
+    "link": "assets/tv-shows/TheTallKnight.jpeg"
+  },
+  {
+    "title": "Legendary Voyage",
+    "category": "Fantasy",
+    "description": "The live-action adaptation of the popular anime continues as Monkey D. Luffy and his crew embark on new adventures in search of the legendary One Piece.",
+    "age-restriction": "12+",
+    "link": "assets/tv-shows/LegendaryVoyage.jpeg"
+  },
+  {
+    "title": "The Crimson Moon",
+    "category": "Fantasy",
+    "description": "A spin-off series set in the world of 'The Witcher,' exploring new characters and stories within the rich fantasy universe.",
+    "age-restriction": "16+",
+    "link": "assets/tv-shows/TheCrimsonMoon.jpeg"
+  },
+  {
+    "title": "Wheel of Destiny",
+    "category": "Fantasy",
+    "description": "A continuation of the 'Wheel of Time' saga, delving deeper into the mysteries of the One Power and the battle against the Dark One.",
+    "age-restriction": "15+",
+    "link": "assets/tv-shows/WheelOfDestiny.jpeg"
+  },
+    {
+    "title": "Truth Detector: Season 2",
+    "category": "Mystery",
+    "description": "Charlie Cale returns as a human lie detector, solving a new mystery each week with celebrity guest appearances.",
+    "age-restriction": "TV-MA",
+    "link": "assets/tv-shows/TruthDetectorSeason2.jpeg"
+  },
+  {
+    "title": "Switched Fates",
+    "category": "Mystery",
+    "description": "A mystery-thriller series where two women from vastly different backgrounds switch souls after a car accident, unearthing dangerous secrets.",
+    "age-restriction": "TV-14",
+    "link": "assets/tv-shows/SwitchedFates.jpeg"
+  },
+  {
+    "title": "Aftermath",
+    "category": "Mystery",
+    "description": "An Australian drama exploring the fallout of an incident that sees a man slap a child at a suburban barbecue.",
+    "age-restriction": "TV-MA",
+    "link": "assets/tv-shows/Aftermath.jpeg"
+  },
+  {
+    "title": "Holmes & Heiress",
+    "category": "Mystery",
+    "description": "A modern take on the classic detective, featuring Sherlock Holmes' daughter solving complex mysteries.",
+    "age-restriction": "TV-PG",
+    "link": "assets/tv-shows/HolmesAndHeiress.jpeg"
+  },
+  {
+    "title": "Vanished Secrets",
+    "category": "Mystery",
+    "description": "A gripping mystery series delving into the disappearance of a loved one and the secrets that unravel.",
+    "age-restriction": "TV-14",
+    "link": "assets/tv-shows/VanishedSecrets.jpeg"
+  },
+  {
+    "title": "The Cipher Files",
+    "category": "Mystery",
+    "description": "A suspenseful tale of espionage and betrayal, as a former agent is drawn back into a world of secrets.",
+    "age-restriction": "TV-MA",
+    "link": "assets/tv-shows/TheCipherFiles.jpeg"
+  },
+  {
+    "title": "Justice Unveiled",
+    "category": "Mystery",
+    "description": "The iconic series returns with new cases and fresh perspectives on justice and law enforcement.",
+    "age-restriction": "TV-14",
+    "link": "assets/tv-shows/JusticeUnveiled.jpeg"
+  },
+  {
+    "title": "Inspector Maigret: Chronicles",
+    "category": "Mystery",
+    "description": "The legendary French detective returns in this classic mystery series, solving crimes with his unique approach.",
+    "age-restriction": "TV-PG",
+    "link": "assets/tv-shows/InspectorMaigretChronicles.jpeg"
+  },
+    {
+    "title": "Island of Firsts",
+    "category": "Reality Show",
+    "description": "A documentary-style reality show following twelve adult virgins as they explore intimacy, relationships, and personal growth while living together in an island retreat.",
+    "age-restriction": "18+",
+    "link": "assets/tv-shows/IslandOfFirsts.jpeg"
+  },
+  {
+    "title": "Solo Seekers",
+    "category": "Reality Show",
+    "description": "A Tamil-language reality show featuring a group of single men from diverse professional backgrounds attempting to find the perfect partner for them.",
+    "age-restriction": "12+",
+    "link": "assets/tv-shows/SoloSeekers.jpeg"
+  },
+  {
+    "title": "Kid vs. Star",
+    "category": "Reality Show",
+    "description": "A Tamil-language reality show where kids take on celebrities in a fun battle of wits, aiming to entertain and engage the audience.",
+    "age-restriction": "All ages",
+    "link": "assets/tv-shows/KidvsStar.jpeg"
+  },
+  {
+    "title": "Villain Royale",
+    "category": "Reality Show",
+    "description": "A reality competition series bringing together 11 notorious figures from popular reality shows to compete for a $200,000 prize and the title of 'America's Ultimate Supervillain'.",
+    "age-restriction": "16+",
+    "link": "assets/tv-shows/VillainRoyale.jpeg"
+  },
+  {
+    "title": "Celebrity Prank Wars",
+    "category": "Reality Show",
+    "description": "Celebrities secretly disrupt fake game show scenarios to add money to a hidden prize pot for unsuspecting contestants, blending reality and comedy.",
+    "age-restriction": "12+",
+    "link": "assets/tv-shows/CelebrityPrankWars.jpeg"
+  },
+  {
+    "title": "Potomac Lives",
+    "category": "Reality Show",
+    "description": "A reality series following the lives of affluent women in Potomac, Maryland, showcasing their personal and professional experiences.",
+    "age-restriction": "16+",
+    "link": "assets/tv-shows/PotomacLives.jpeg"
+  },
+  {
+    "title": "Street Race Kings",
+    "category": "Reality Show",
+    "description": "Street racers compete at tracks across the country for a $200,000 prize, showcasing high-speed thrills and intense competition.",
+    "age-restriction": "16+",
+    "link": "assets/tv-shows/StreetRaceKings.jpeg"
+  },
+  {
+    "title": "Extreme Encounters",
+    "category": "Reality Show",
+    "description": "A series exploring extreme human behavior, wild weather, insane accidents, and acts of kindness, offering a raw look at real-life events.",
+    "age-restriction": "16+",
+    "link": "assets/tv-shows/ExtremeEncounters.jpeg"
+  }
+]
+
