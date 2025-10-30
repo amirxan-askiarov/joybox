@@ -1,0 +1,24 @@
+@use "sass:list";
+
+@mixin linkActive($color) {
+    color: $color;
+    outline: none;
+}
+
+@mixin transition($effects...) {
+    $transition-list: ();
+
+    @each $effect in $effects {
+        $eff: ($effect 0.3s ease);
+        $transition-list: list.append($transition-list, $eff, $separator: comma);
+    }
+
+    transition: $transition-list;
+}
+
+@mixin overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10
+}

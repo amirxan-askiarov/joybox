@@ -1,0 +1,195 @@
+:root {
+    --swiper-navigation-color: var.$containerBgColor;
+    --swiper-navigation-size: 2.5rem;
+
+    .swiper-button-prev,
+    .swiper-button-next {
+       
+      opacity: 0.8;
+      @include mx.transition(opacity, color);
+      
+      &:hover, :focus {
+        opacity: 1;
+        border: var.$lightBorder;
+      }
+    }
+}
+
+.newReleases {
+  position: relative;
+  color: var.$textColor;
+
+  padding: 3rem;
+
+  &__title {
+    margin-bottom: 2rem;
+  }
+
+  h2 {
+    font-size: clamp(2.2rem, 3vw, 2.5rem);
+  }
+
+  h3 {
+    font-size: clamp(2.2rem, 3vw, 2.5rem);
+  }
+
+  &__carouselContainer {
+    align-items: center;
+    position: relative;
+
+    &__arrowBox {
+      height: 100%;
+      width: 3rem;
+    }
+  }
+
+  &__carousel {
+    width: 100%;
+    height: clamp(32rem, 42vw, 47rem);
+    justify-content: center;
+    z-index: 0;
+    border-radius: var.$bigBorderRadius;
+  }
+
+  &__card {
+    min-height: clamp(30rem, 40vw, 45rem);
+
+    &:hover,
+    &--active {
+      box-shadow: var.$darkBoxShadow;
+
+      .newReleases__description {
+        opacity: 1;
+        max-height: 20rem;
+      }
+      
+      &::before {
+        height: clamp(15vh, 23vh, 28vh);
+        opacity: 1; 
+      }
+      
+      .newReleases__info {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+
+  &__image {
+      position: absolute; 
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      z-index: 0;
+  }
+
+&__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 1rem;
+
+    opacity: 0; 
+    transform: translateY(1rem);
+    @include mx.transition(opacity, transform);
+
+    position: absolute; 
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 1rem 1rem;
+    z-index: 3;
+
+    @media (max-width: 665px) {
+      padding: 1rem;
+    }
+
+    &__age {
+      font-size: 1.8rem;
+      font-family: var.$fontBase;
+      font-weight: 700;
+      background: #ff0048;
+      color: var.$textColor;
+      padding: 0.3rem 0.5rem;
+      border-radius: 0.3rem;
+      max-width: fit-content;
+    }
+  }
+
+  &__gameTitle {
+    margin-bottom: 0.3rem;
+  }
+
+  &__age {
+    background: #ff0048;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+  }
+
+  &__description {
+    margin-top: 0.5rem;
+    line-height: 1.4;
+    opacity: 0;
+    max-height: 0;
+    z-index: inherit;
+
+    overflow-wrap: break-word;
+    @include mx.transition(opacity, height);
+  }
+
+  &__btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 0.75rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+
+    @media (max-width: 767px) {
+      gap: 0.5rem;
+      justify-content: stretch;
+    }
+  }
+
+  &__btn {
+    background: var.$categoryBtnColor;
+    border: none;
+    padding: 2rem 2.5rem;
+    border-radius: var.$smallBorderRadius;
+    color: var.$textColor;
+    cursor: pointer;
+
+    @media (max-width: 767px) {
+      padding: 0.8rem 1.2rem;
+      flex: 1 1 auto; 
+    }
+
+    &:hover {
+      background: var.$categoryBtnColor;
+    }
+  }
+
+  &__arrow {
+    padding: 0.5rem;
+    opacity: 0.6;
+
+    background: url("../../../public/assets/category-new-releases-arrow-left.svg");
+    border: var.$darkBorder;
+    border-radius: var.$smallBorderRadius;
+    color: var.$textColor;
+    @include mx.transition(opacity);
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:hover,
+    &:focus {
+      border: 0.1rem solid var.$activeColor;
+    }
+  }
+}
+

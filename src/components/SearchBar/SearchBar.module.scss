@@ -1,0 +1,143 @@
+.searchBar {
+  display: none;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+
+  @media (max-width: 1023px) {
+    display: flex;
+  }
+}
+
+.searchDesktop {
+  display: flex;
+  align-items: center;
+
+  border: var.$darkBorder;
+  border-radius: var.$smallBorderRadius;
+
+  padding: 0.1rem 0.1rem;
+  background-color: var.$containerBgColor;
+
+  @include mx.transition(all);
+
+  input {
+    flex: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var.$textColor;
+
+    line-height: 2rem; 
+    padding: 0.5rem 0.8rem;
+
+    &::placeholder {
+      color: #ccc;
+    }
+
+    &__Btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      width: 3rem;
+      height: 3rem;
+    }
+
+    &:focus-within {
+      width: 26rem;
+      border-color: var.$activeColor;
+    }
+
+    @media (max-width: 1023px) {
+      display: none;
+    }
+  }
+}
+
+.searchMobile__Btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var.$textColor;
+
+  @media (max-width: 1023px) {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.searchOverlay {
+  @include mx.overlay();
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 8rem;
+}
+
+.searchPopup {
+  background: var.$containerBgColor;
+  border-radius: var.$mediumBorderRadius;
+  padding: 3rem;
+  position: relative;
+  box-shadow: var.$darkBoxShadow;
+  animation: popup-slide 0.3s ease;
+  width: 90%;
+  max-width: 40rem;
+}
+
+.closeBtn {
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var.$textColor;
+}
+
+.searchOverlay__searchInput {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+
+  .icon {
+    color: var.$textColor;
+  }
+
+  input {
+    flex: 1;
+    border: none;
+    border-bottom: var.$lightBorder;
+    background: transparent;
+    outline: none;
+    padding: 0.8rem 0;
+    color: var.$textColor;
+
+    &::placeholder {
+      color: #ccc;
+    }
+
+    &:focus {
+      border-color: var.$activeColor;
+    }
+  }
+}
+
+@keyframes popup-slide {
+  from {
+    transform: translateY(-2rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+

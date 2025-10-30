@@ -1,0 +1,146 @@
+.register {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var.$bgColor;
+  color: var.$textColor;
+  overflow: hidden;
+
+  &__container {
+    @media (min-width: 768px) {
+      display: grid;
+      grid-template-columns: 2fr 2fr;
+    }
+  }
+
+  &__background {
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../../assets/registration/joybox-background.jpeg");
+
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  &__formSection {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    max-width: 48rem;
+    margin: 0 auto;
+    text-align: center;
+
+    @media (min-width: 768px) {
+      margin-left: auto;
+      padding: 4rem;
+    }
+  }
+
+  &__title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var.$primaryColor;
+  }
+
+  &__subtitle {
+    font-size: 1.4rem;
+    color: var.$textColor;
+    margin-bottom: 2rem;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  &__label {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var.$textColor;
+  }
+
+  &__input {
+    padding: 1rem 1.2rem;
+    border-radius: 0.8rem;
+    border: var.$darkBorder;
+    background-color: var.$containerBgColor;
+    color: var.$textColor;
+    font-size: 1.4rem;
+
+    &:focus {
+      border-color: var.$primaryColor;
+      box-shadow: 0 0 0 0.2rem var.$activeColor;
+      outline: none;
+    }
+  }
+
+  &__submit {
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    background-color: var.$primaryColor;
+    color: var.$textColor;
+    border: none;
+    border-radius: 0.8rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-color: var.$activeColor;
+    }
+  }
+
+  &__social {
+    margin-top: 2rem;
+    font-size: 1.3rem;
+    color: var.$textColor;
+
+    &Btns {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 0.5rem;
+    }
+
+    &Btn {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      color: var.$textColor;
+      background-color: var.$containerBgColor;
+      border: var.$darkBorder;
+      border-radius: 0.8rem;
+      padding: 0.8rem 1rem;
+      cursor: pointer;
+      font-size: 1.3rem;
+
+      &:hover,
+      &:focus {
+        background-color: var.$activeColor;
+        border-color: var.$primaryColor;
+      }
+
+      img {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+  }
+}

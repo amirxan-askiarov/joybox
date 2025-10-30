@@ -1,0 +1,22 @@
+
+$primaryColor: #ff3b7f;
+$activeColor: #ff669f;
+
+$categoryBtnColor: linear-gradient(135deg, #ff0048, #ff7e00);
+$categoryBtnActiveColor: linear-gradient(135deg, #ff7e00, #ff0048);
+
+$bgColor: #0d0d0f;
+$containerBgColor: #1a1a1a;
+$textColor: #e9e9e9;
+
+$fontBase: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+$darkBorderColor: rgba(255, 255, 255, 0.1);
+$darkBorder: 0.1rem solid $darkBorderColor;
+$lightBorder: 0.1rem solid $textColor;
+
+$darkBoxShadow: 0 0.8rem 1.6rem rgba(0, 0, 0, 0.3);
+
+$smallBorderRadius: 0.8rem;
+$mediumBorderRadius: 1.2rem;
+$bigBorderRadius: 1.6rem;

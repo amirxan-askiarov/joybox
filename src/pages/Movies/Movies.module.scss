@@ -1,0 +1,17 @@
+.movies {
+  padding: 1rem;
+  background-color: var.$bgColor;
+  color: var.$textColor;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  font-family: var.$fontBase;
+
+  @media (min-width: 768px) {
+    padding: 2rem;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 3rem 4rem;
+  }
+}

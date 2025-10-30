@@ -1,0 +1,408 @@
+[
+  {
+    "title": "Wriggle World",
+    "category": "Casual",
+    "description": "Control a snake and consume pellets to grow longer while avoiding other snakes. The goal is to become the longest snake on the server.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/WriggleWorld.png"
+  },
+  {
+    "title": "Egg Shooters",
+    "category": "Casual",
+    "description": "A first-person shooter where players control armed eggs and battle in various game modes. It's a unique twist on the FPS genre.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/EggShooters.png"
+  },
+  {
+    "title": "Bakery Bonanza",
+    "category": "Casual",
+    "description": "An incremental game where players click to produce cookies and use them to buy upgrades, aiming to produce cookies at an ever-increasing rate.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/BakeryBonanza.png"
+  },
+  {
+    "title": "MapQuestor",
+    "category": "Casual",
+    "description": "Players are placed in a random location on Google Street View and must guess their location based on visual clues. It's a fun way to explore the world.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/MapQuestor.png"
+  },
+  {
+    "title": "Frindy Fuckin'",
+    "category": "Casual",
+    "description": "A rhythm game where players must match the beat to win rap battles against various characters. It's a fun and challenging game for music lovers.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/FrindyFukin.jpeg"
+  },
+  {
+    "title": "A the Caverge Way To Cafe",
+    "category": "Casual",
+    "description": "A relaxing simulation game where players manage a cat cafe, serving drinks and interacting with adorable cats.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/ATheCavergeWayToCafe.jpeg"
+  },
+  {
+    "title": "Clicked",
+    "category": "Casual",
+    "description": "A parody of clicker games that becomes increasingly chaotic and distracting as players progress, reflecting the overstimulation of the internet.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/Clicked.jpeg"
+  },
+  {
+    "title": "Feed Frenzy",
+    "category": "Casual",
+    "description": "A casual web-based game where players act as content moderators for a fictional social media company, making decisions under time pressure.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/FeedFrenzy.jpeg"
+  },
+  {
+    "title": "Fashion Royale",
+    "category": "Casual",
+    "description": "A fashion simulation game where players can dress up their character, participate in fashion events, and socialize with other players.",
+    "age-restriction": "13+",
+    "link": "assets/games/FashionRoyale.jpeg"
+  },
+    {
+    "title": "Epic Stick Slash",
+    "category": "Fighting",
+    "description": "Engage in intense stickman battles with dynamic ragdoll physics and a variety of weapons.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/EpicStickClash.jpeg"
+  },
+  {
+    "title": "Kickmaster",
+    "category": "Fighting",
+    "description": "A classic 2D karate game where you face off against various opponents in martial arts tournaments.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/Kickmaster.jpeg"
+  },
+  {
+    "title": "Dragon Stick Duel",
+    "category": "Fighting",
+    "description": "A dragon-themed stickman fighting game with epic battles and special moves.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/DragonStickDuel.jpeg"
+  },
+  {
+    "title": "Snout Smashers",
+    "category": "Fighting",
+    "description": "Help a lone pig fight off waves of wolves in this fast-paced action game.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/SnoutSmashers.jpeg"
+  },
+  {
+    "title": "Stick Combat Zone",
+    "category": "Fighting",
+    "description": "A simple yet addictive stickman fighting game with various characters and moves.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/StickCombatZone.jpeg"
+  },
+  {
+    "title": "Knockout Kings",
+    "category": "Fighting",
+    "description": "Step into the ring and become a boxing champion in this action-packed game.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/KnockoutKings.jpeg"
+  },
+  {
+    "title": "Ring Ruckus",
+    "category": "Fighting",
+    "description": "Engage in over-the-top wrestling matches with unique characters and moves.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/RingRuckus.jpeg"
+  },
+  {
+    "title": "Epick Stick Slash 2",
+    "category": "Fighting",
+    "description": "The sequel to the original, featuring more characters, moves, and epic battles.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/EpicStickSlash2.jpeg"
+  },
+  {
+    "title": "Punch Pro Simulator",
+    "category": "Fighting",
+    "description": "Train your punching skills and become a legend in this simulation game.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/PunchProSimulator.jpeg"
+  },
+  {
+    "title": "Stick Wars: Battlefront",
+    "category": "Fighting",
+    "description": "A strategic stickman battle game where you lead your army to victory.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/StickWarsBattlefront.jpeg"
+  },
+    {
+    "title": "TavernTales Online",
+    "category": "MMO and Battle Royale",
+    "description": "A free-to-play 2D pixel fantasy MMORPG offering real-time combat, crafting, and dungeon exploration. Playable on PC, Mac, Linux, and mobile browsers.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/TavernTalesOnline.jpeg"
+  },
+  {
+    "title": "RetroQuest Online",
+    "category": "MMO and Battle Royale",
+    "description": "A retro-inspired browser MMORPG featuring quests, trade skills, and player-driven stories. Playable on desktop and mobile browsers.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/RetroQuestOnline.jpeg"
+  },
+  {
+    "title": "Mythhaven",
+    "category": "MMO and Battle Royale",
+    "description": "A classic 3D MMORPG with a vast open world, skill-based progression, and a rich lore. Playable on desktop and mobile browsers.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/Mythhaven.jpeg"
+  },
+  {
+    "title": "Wings of Eternity",
+    "category": "MMO and Battle Royale",
+    "description": "An anime-inspired MMORPG with real-time combat, weekly content updates, and a lively guild system. Playable on desktop browsers.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/WingsOfEternity.jpeg"
+  },
+  {
+    "title": "Void Royale",
+    "category": "MMO and Battle Royale",
+    "description": "A browser-based MMORPG featuring aerial combat, anime aesthetics, and guild wars. Playable on desktop browsers.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/VoidRoyale.jpeg"
+  },
+  {
+    "title": "Survival Grounds",
+    "category": "MMO and Battle Royale",
+    "description": "A 2D battle royale game with pixel art style, offering solo, duo, and squad modes. Players fight to be the last one standing.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/SurvivalGrounds.jpeg"
+  },
+  {
+    "title": "Survivor’s Edge",
+    "category": "MMO and Battle Royale",
+    "description": "A top-down 2D battle royale game where players scavenge for weapons and fight to be the last one alive.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/SurvivorsEdge.jpeg"
+  },
+  {
+    "title": "FireTeam Royale",
+    "category": "MMO and Battle Royale",
+    "description": "A multiplayer battle royale game with a variety of weapons and maps, offering fast-paced combat.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/FireTeamRoyale.jpeg"
+  },
+  {
+    "title": "Crawl Royale",
+    "category": "MMO and Battle Royale",
+    "description": "A snake-themed battle royale game where players consume pellets to grow longer while avoiding other snakes.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/CrawlRoyale.jpeg"
+  },
+    {
+    "title": "8-Bit Football League",
+    "category": "Sports and Competitive",
+    "description": "A retro-style American football game where you manage a team, make strategic decisions, and aim for the championship.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/8-BitFootballLeague.jpeg"
+  },
+  {
+    "title": "Ultimate Soccer Challenge",
+    "category": "Sports and Competitive",
+    "description": "A soccer game that challenges your skills with various levels and opponents, aiming to become the champion.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/UltimateSoccerChallenge.jpeg"
+  },
+  {
+    "title": "Smash Spin Masters",
+    "category": "Sports and Competitive",
+    "description": "A realistic table tennis game that tests your reflexes and precision in fast-paced matches.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/SmashSpinMasters.jpeg"
+  },
+  {
+    "title": "Street Dunk Legends",
+    "category": "Sports and Competitive",
+    "description": "An intense basketball game offering one-on-one matches with various moves and tricks to outplay your opponent.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/StreetDunkLegends.jpeg"
+  },
+  {
+    "title": "Legends of the Pitch",
+    "category": "Sports and Competitive",
+    "description": "A soccer game featuring legendary players and teams, aiming to win the championship through skillful play.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/LegendsOfThePitch.jpeg"
+  },
+  {
+    "title": "Penalty Clash Reloaded",
+    "category": "Sports and Competitive",
+    "description": "A penalty shootout game where you aim to score goals and defend against the opponent's shots.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/PenaltyClashReloaded.jpeg"
+  },
+  {
+    "title": "Gridiron Greats 2021",
+    "category": "Sports and Competitive",
+    "description": "A football game featuring legendary players, offering exciting matches and tournaments.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/GridironGreats2021.jpeg"
+  },
+  {
+    "title": "Punch Chaos",
+    "category": "Sports and Competitive",
+    "description": "A quirky boxing game where characters fight with random movements and physics, offering unpredictable fun.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/PunchChaos.jpeg"
+  },
+  {
+    "title": "3D Snowboard Rush",
+    "category": "Sports and Competitive",
+    "description": "A snowboarding game where you perform tricks and navigate through challenging terrains.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/3DSnowboardRush.jpeg"
+  },
+  {
+    "title": "Bean Volley Clash",
+    "category": "Sports and Competitive",
+    "description": "A volleyball game featuring bean characters, offering fun and competitive matches.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/BeanVolleyClash.jpeg"
+  },
+    {
+    "title": "Realm Defenders",
+    "category": "Strategy And Tower Defense",
+    "description": "A classic tower defense game where you defend your kingdom from waves of enemies using various towers and heroes.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/RealmDefenders.jpeg"
+  },
+  {
+    "title": "Dark Vault Defense",
+    "category": "Strategy And Tower Defense",
+    "description": "Defend your gems from heroes by placing towers and using powerful spells in this strategic tower defense game.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/DarkVaultDefense.jpeg"
+  },
+  {
+    "title": "Inflato Defense 5",
+    "category": "Strategy And Tower Defense",
+    "description": "Pop balloons using a variety of towers and upgrades in this popular tower defense game.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/InflatoDefense5.jpeg"
+  },
+  {
+    "title": "GemWard Maze",
+    "category": "Strategy And Tower Defense",
+    "description": "A tower defense game where you combine gems to create powerful towers and defend against waves of enemies.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/GemWardMaze.jpeg"
+  },
+  {
+    "title": "Fortify.io",
+    "category": "Strategy And Tower Defense",
+    "description": "A unique combination of tower defense and real-time strategy where you build and defend your base against zombies.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/Fortify.io.jpeg"
+  },
+  {
+    "title": "Empire Tactics",
+    "category": "Strategy And Tower Defense",
+    "description": "A free online strategy war game with portal movement, tournaments, and a mix of strategy and politics.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/EmpireTactics.jpeg"
+  },
+  {
+    "title": "Empire Age: Origins",
+    "category": "Strategy And Tower Defense",
+    "description": "A browser-based, massively multiplayer online real-time strategy game set in classical antiquity.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/EmpireAgeOrigins.jpeg"
+  },
+  {
+    "title": "MercForce Online",
+    "category": "Strategy And Tower Defense",
+    "description": "A massively multiplayer online real-time strategy game set in the fictional country of Zandia, where players compete for control of rich mineral fields.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/MercForceOnline.jpeg"
+  },
+  {
+    "title": "Mythic Territories",
+    "category": "Strategy And Tower Defense",
+    "description": "A browser-based multiplayer game in the genre of military-economic real-time strategy set in a fantasy world.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/MythicTerritories.jpeg"
+  },
+  {
+    "title": "Globe of War",
+    "category": "Strategy And Tower Defense",
+    "description": "A free online strategy game in the best traditions of Risk, Civilization, and Axis & Allies, featuring multiplayer and browser-based gameplay.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/GlobeOfWar.jpeg"
+  },
+    {
+    "title": "Primordia Survival",
+    "category": "Survival And Sandbox",
+    "description": "A free multiplayer survival sandbox game where you hunt, mine, and build anywhere. No download or registration required.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/PrimordiaSurvival.jpeg"
+  },
+  {
+    "title": "BlockVerse MMO",
+    "category": "Survival And Sandbox",
+    "description": "A massively multiplayer free-to-play sandbox game with a central, persistent world shared by all players. Features building, quests, and combat.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/BlockVerseMMO.jpeg"
+  },
+  {
+    "title": "Last Haven",
+    "category": "Survival And Sandbox",
+    "description": "A free-to-play open world zombie survival sandbox game where players can create custom maps and mods using the game's Unity engine.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/LastHaven.jpeg"
+  },
+  {
+    "title": "Tide Survival",
+    "category": "Survival And Sandbox",
+    "description": "An open world survival-sandbox game set in a flooded apocalypse. Players venture out into the open sea in search of habitable land and resources.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/TideSurvival.jpeg"
+  },
+  {
+    "title": "Blockscape Chronicles",
+    "category": "Survival And Sandbox",
+    "description": "A sandbox video game featuring a procedurally generated interactive voxel-based open world, where players survive and defend against an intergalactic infection.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/BlockscapeChronicles.jpeg"
+  },
+  {
+    "title": "Way of the Clan",
+    "category": "Survival And Sandbox",
+    "description": "A massively multiplayer sandbox survival game set in the time of the samurai. Features building, farming, crafting, horse riding, and clan wars.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/WayOfTheClan.jpeg"
+  },
+  {
+    "title": "Containment Protocol",
+    "category": "Survival And Sandbox",
+    "description": "A survival crafting game set during a 1993 Black Mesa-style disaster. Players assume the role of stranded scientists in a research facility.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/ContainmentProtocol.jpeg"
+  },
+  {
+    "title": "Stellar Colonies",
+    "category": "Survival And Sandbox",
+    "description": "An open-world sandbox adventure game that combines space flight simulation with survival mechanics. Players explore planets and build structures.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/StellarColonies.jpeg"
+  },
+  {
+    "title": "Rogue Trail",
+    "category": "Survival And Sandbox",
+    "description": "A wilderness survival game with a focus on exploration, crafting, and permadeath. Features a randomly generated world and turn-based gameplay.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/RogueTrail.jpeg"
+  },
+  {
+    "title": "Simulopolis",
+    "category": "Survival And Sandbox",
+    "description": "A browser-based massively multiplayer online game that simulates a persistent digital world, accessible from users without any client-side installation.",
+    "age-restriction": "All Ages",
+    "link": "assets/games/Simulopolis.jpeg"
+  }
+]
