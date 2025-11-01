@@ -40,8 +40,6 @@ const AllProducts = <T extends Product>({
   productsName
 }: AllProductsProps<T>) => {
 
-  const uniqueKey = Date.now();
-
   return (
     <section className={styles.allProducts}>
       {categories.map((cat) => {
@@ -58,7 +56,7 @@ const AllProducts = <T extends Product>({
             </div>
 
             <Swiper
-              key={cat + uniqueKey} 
+              key={cat} 
               className={styles.allProducts__carousel}
               modules={[Navigation, Pagination, Keyboard]}
               breakpoints={swiperBreakpoints}
@@ -66,8 +64,8 @@ const AllProducts = <T extends Product>({
               keyboard={{ enabled: true }}
               navigation={true}
             >
-              {items.map((item, idx) => (
-                <SwiperSlide key={`${item.title} + ${idx}`}>
+              {items.map((item) => (
+                <SwiperSlide key={item.title}>
                   <article className={styles.allProducts__card}>
                     <picture>
                       <source type="image/avif" srcSet={item.link} />

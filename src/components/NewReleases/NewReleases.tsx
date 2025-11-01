@@ -42,9 +42,9 @@ const NewReleases = <T extends Product>({
         navigation={true}
         pagination={enaBleDots}
       >
-        {products.map((product) => (
+        {products.map((product, idx) => (
           <SwiperSlide>
-            <div className={styles.newReleases__card}>
+            <div key={`${product.title} + ${idx}`} className={styles.newReleases__card}>
               <picture>
                 <source type="image/avif" srcSet={product.link} />
                 <source type="image/webp" srcSet={product.link.replace('avif', 'webp')} />
