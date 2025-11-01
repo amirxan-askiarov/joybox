@@ -2,7 +2,6 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
   background-color: var.$bgColor;
   color: var.$textColor;
   overflow: hidden;
@@ -19,7 +18,12 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url("../../assets/registration/joybox-background.jpeg");
+
+    background-image: url("../../registration/jpeg/joybox-background.jpeg");
+    background-image: image-set(
+      url("../../registration/avif/joybox-background.avif") type("image/avif"),
+      url("../../registration/webp/joybox-background.webp") type("image/webp")
+    );
 
     @media (max-width: 767px) {
       display: none;

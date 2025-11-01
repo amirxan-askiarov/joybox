@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./Registration.module.scss";
-import googleIcon from "/assets/registration/google-logo.svg";
-import metaIcon from "/assets/registration/meta-logo.png";
-import appleIcon from "/assets/registration/apple-logo.svg";
+import googleIcon from "/registration/svg/google-logo.svg";
+import metaIcon from "/registration/svg/meta-logo.png";
+import appleIcon from "/registration/svg/apple-logo.svg";
 
 const Registration: React.FC = () => {
   return (

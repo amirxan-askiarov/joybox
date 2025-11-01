@@ -11,7 +11,7 @@ const Streams: React.FC = () => {
   const [categories, setCategories] = useState<string[]>([]);
 
   useEffect(() => {
-    fetch("/public/assets/streams/streams-info.json")
+    fetch("/streams/streams-info.json")
       .then((res) => res.json())
       .then((data: Stream[]) => {
         setStreams(data);

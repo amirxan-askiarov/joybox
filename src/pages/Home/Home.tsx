@@ -3,14 +3,29 @@ import styles from "./Home.module.scss";
 
 import Header from "../../components/Header/Header.tsx";
 
-import moviesImg from "/assets/home/movies.jpeg";
-import tvshowsImg from "/assets/home/tv-shows.jpeg";
-import streamsImg from "/assets/home/streams.jpeg";
-import gamesImg from "/assets/home/games.jpeg";
+import moviesImgAvif from "/home/avif/movies.avif";
+import tvshowsImgAvif from "/home/avif/tv-shows.avif";
+import streamsImgAvif from "/home/avif/streams.avif";
+import gamesImgAvif from "/home/avif/games.avif";
+import enjoyAndSaveImgAvif from "/home/avif/enjoy-and-save.avif";
+import enjoyEverywhereImgAvif from "/home/avif/enjoy-everywhere.avif";
+import enjoyAnytimeImgAvif from "/home/avif/enjoy-anytime.avif";
 
-import enjoyAndSaveImg from "/assets/home/enjoy-and-save.jpeg";
-import enjoyEverywhereImg from "/assets/home/enjoy-everywhere.jpeg";
-import enjoyAnytimeImg from "/assets/home/enjoy-anytime.jpeg";
+import moviesImgWebp from "/home/webp/movies.webp";
+import tvshowsImgWebp from "/home/webp/tv-shows.webp";
+import streamsImgWebp from "/home/webp/streams.webp";
+import gamesImgWebp from "/home/webp/games.webp";
+import enjoyAndSaveImgWebp from "/home/webp/enjoy-and-save.webp";
+import enjoyEverywhereImgWebp from "/home/webp/enjoy-everywhere.webp";
+import enjoyAnytimeImgWebp from "/home/webp/enjoy-anytime.webp";
+
+import moviesImgJpeg from "/home/jpeg/movies.jpeg";
+import tvshowsImgJpeg from "/home/jpeg/tv-shows.jpeg";
+import streamsImgJpeg from "/home/jpeg/streams.jpeg";
+import gamesImgJpeg from "/home/jpeg/games.jpeg";
+import enjoyAndSaveImgJpeg from "/home/jpeg/enjoy-and-save.jpeg";
+import enjoyEverywhereImgJpeg from "/home/jpeg/enjoy-everywhere.jpeg";
+import enjoyAnytimeImgJpeg from "/home/jpeg/enjoy-anytime.jpeg";
 
 const Home: React.FC = () => {
   return (
@@ -19,11 +34,13 @@ const Home: React.FC = () => {
     <main className={styles.home}>
       <section className={styles.home__serviceSection}>
         <div className={styles.home__serviceSection__imgBox}>
-          <img
-            src={tvshowsImg}
-            alt="TV Shows category"
-            className={styles.home__serviceSection__imgBox__image}
-          />
+          <picture>
+            <source type="image/avif" srcSet={tvshowsImgAvif} />
+            <source type="image/webp" srcSet={tvshowsImgWebp} />
+            <img src={tvshowsImgJpeg} alt="TV Shows category" 
+              className={styles.home__serviceSection__imgBox__image}
+              loading="eager" fetchPriority="high" />
+          </picture>
         </div>
         <div className={styles.home__serviceSection__contentBox}>
           <h2 className={styles.home__serviceSection__contentBox__title}>TV Shows</h2>
@@ -37,11 +54,13 @@ const Home: React.FC = () => {
 
       <section className={`${styles.home__serviceSection} ${styles["home__serviceSection--reversed"]}`}>
         <div className={styles.home__serviceSection__imgBox}>
-          <img
-          src={moviesImg}
-          alt="Movies category"
-            className={styles.home__serviceSection__imgBox__image}
-          />
+          <picture>
+            <source type="image/avif" srcSet={moviesImgAvif} />
+            <source type="image/webp" srcSet={moviesImgWebp} />
+            <img src={moviesImgJpeg} alt="Movies category"
+              className={styles.home__serviceSection__imgBox__image}
+            />
+          </picture>
         </div>
         <div className={styles.home__serviceSection__contentBox}>
           <h2 className={styles.home__serviceSection__contentBox__title}>Movies</h2>
@@ -55,11 +74,12 @@ const Home: React.FC = () => {
 
       <section className={styles.home__serviceSection}>
         <div className={styles.home__serviceSection__imgBox}>
-          <img
-          src={streamsImg}
-          alt="Streams category"
-            className={styles.home__serviceSection__imgBox__image}
-          />
+          <picture>
+            <source type="image/avif" srcSet={streamsImgAvif} />
+            <source type="image/webp" srcSet={streamsImgWebp} />
+            <img src={streamsImgJpeg} alt="Streams category"
+              className={styles.home__serviceSection__imgBox__image} />
+          </picture>
         </div>
         <div className={styles.home__serviceSection__contentBox}>
           <h2 className={styles.home__serviceSection__contentBox__title}>Streams</h2>
@@ -73,11 +93,13 @@ const Home: React.FC = () => {
 
       <section className={`${styles.home__serviceSection} ${styles["home__serviceSection--reversed"]}`}>
         <div className={styles.home__serviceSection__imgBox}>
-          <img
-          src={gamesImg}
-          alt="Online Games category"
-            className={styles.home__serviceSection__imgBox__image}
-          />
+          <picture>
+            <source type="image/avif" srcSet={gamesImgAvif} />
+            <source type="image/webp" srcSet={gamesImgWebp} />
+            <img src={gamesImgJpeg} alt="Online Games category"
+              className={styles.home__serviceSection__imgBox__image}
+            />
+          </picture>
         </div>
         <div className={styles.home__serviceSection__contentBox}>
           <h2 className={styles.home__serviceSection__contentBox__title}>Online Games</h2>
@@ -94,11 +116,12 @@ const Home: React.FC = () => {
         <div className={styles.home__benefitsList}>
           <div className={styles.home__benefit}>
             <div className={styles.home__benefit__imgBox}>
-              <img
-                src={enjoyAndSaveImg}
-                alt="Enjoy and Save"
-                className={styles.home__benefit__imgBox__image}
-              />
+              <picture>
+                <source type="image/avif" srcSet={enjoyAndSaveImgAvif} />
+                <source type="image/webp" srcSet={enjoyAndSaveImgWebp} />
+                <img src={enjoyAndSaveImgJpeg} alt="Enjoy and Save"
+                  className={styles.home__benefit__imgBox__image} />
+              </picture>
             </div>
             <div className={styles.home__benefit__textBox}>
               <h3 className={styles.home__benefit__textBox__title}>Enjoy and Save</h3>
@@ -109,11 +132,12 @@ const Home: React.FC = () => {
           </div>
           <div className={styles.home__benefit}>
             <div className={styles.home__benefit__imgBox}>
-              <img
-                src={enjoyEverywhereImg}
-                alt="Enjoy Everywhere"
-                className={styles.home__benefit__imgBox__image}
-              />
+              <picture>
+                <source type="image/avif" srcSet={enjoyEverywhereImgAvif} />
+                <source type="image/webp" srcSet={enjoyEverywhereImgWebp} />
+                <img src={enjoyEverywhereImgJpeg} alt="Enjoy Everywhere"
+                  className={styles.home__benefit__imgBox__image} />
+              </picture>
             </div>
             <div className={styles.home__benefit__textBox}>
               <h3 className={styles.home__benefit__textBox__title}>Enjoy Everywhere</h3>
@@ -124,11 +148,12 @@ const Home: React.FC = () => {
           </div>
           <div className={styles.home__benefit}>
             <div className={styles.home__benefit__imgBox}>
-              <img
-                src={enjoyAnytimeImg}
-                alt="Enjoy Anytime"
-                className={styles.home__benefit__imgBox__image}
-              />
+              <picture>
+                <source type="image/avif" srcSet={enjoyAnytimeImgAvif} />
+                <source type="image/webp" srcSet={enjoyAnytimeImgWebp} />
+                <img src={enjoyAnytimeImgJpeg} alt="Enjoy Anytime"
+                  className={styles.home__benefit__imgBox__image} />
+              </picture>
             </div>
             <div className={styles.home__benefit__textBox}>
               <h3 className={styles.home__benefit__textBox__title}>Enjoy Anytime</h3>

@@ -98,6 +98,12 @@ input[type=number] {
     display: none;
 }
 
+/* Remove default red glow in Firefox */
+.form-row input[type='text']:invalid,
+.form-row input[type='email']:invalid {
+  box-shadow: none; 
+}
+
 blockquote::before, 
 blockquote::after,
 q::before, 

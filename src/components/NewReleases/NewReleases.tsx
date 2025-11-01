@@ -45,12 +45,13 @@ const NewReleases = <T extends Product>({
         {products.map((product) => (
           <SwiperSlide>
             <div className={styles.newReleases__card}>
-              <img
-                src={product.link}
-                alt={product.title}
-                className={styles.newReleases__image}
-                loading="eager" fetchPriority="high"
-              />
+              <picture>
+                <source type="image/avif" srcSet={product.link} />
+                <source type="image/webp" srcSet={product.link.replace('avif', 'webp')} />
+                <img src={product.link.replace('avif', 'jpeg')} alt={product.title}
+                  className={styles.newReleases__image}
+                  loading="eager" fetchPriority="high" />
+              </picture>
               <div className={styles.newReleases__info}>
                 <h3 className={styles.newReleases__gameTitle}>
                   {product.title}

@@ -1,0 +1,331 @@
+[
+  {
+    "title": "Calm Canvas – Joyful Painting Lessons",
+    "category": "Creative",
+    "description": "Experience the soothing art tutorials of Bob Ross as he guides you through creating beautiful landscapes with his signature wet-on-wet oil painting technique.",
+    "age-restriction": "All Ages",
+    "link": "streams/avif/CalmCanvas–JoyfulPaintingLessons.avif"
+  },
+  {
+    "title": "Artflow Live – Creative Streaming Hub",
+    "category": "Creative",
+    "description": "Picarto is a platform dedicated to live art streaming, where artists showcase their creative processes in real-time, covering various mediums and styles.",
+    "age-restriction": "All Ages",
+    "link": "streams/avif/ArtflowLive–CreativeStreamingHub.avif"
+  },
+  {
+    "title": "StreamStudio – Creative Makers Live",
+    "category": "Creative",
+    "description": "Twitch's Creative category hosts a variety of live streams featuring artists, musicians, and creators engaging in their craft, from painting to music production.",
+    "age-restriction": "All Ages",
+    "link": "streams/avif/StreamStudio–CreativeMakersLive.avif"
+  },
+  {
+    "title": "Global Artcast – Live Design Sessions",
+    "category": "Creative",
+    "description": "YouTube Live offers a platform for artists to broadcast their creative processes, tutorials, and live art sessions to a global audience.",
+    "age-restriction": "All Ages",
+    "link": "streams/avif/GlobalArtcast-LiveDesignSessions.avif"
+  },
+  {
+    "title": "ArtRealm – Live Creations",
+    "category": "Creative",
+    "description": "DeviantArt's Livestream feature allows artists to broadcast their creative sessions, interact with viewers, and showcase their artwork in progress.",
+    "age-restriction": "All Ages",
+    "link": "streams/avif/ArtRealm–LiveCreations.avif"
+  },
+  {
+    "title": "DesignStream – Learn and Create Live",
+    "category": "Creative",
+    "description": "Behance Live offers creative professionals a platform to stream their work, share insights, and engage with a community of artists and designers.",
+    "age-restriction": "All Ages",
+    "link": "streams/avif/DesignStream–LearnAndCreateLive.avif"
+  },
+  {
+    "title": "DesignScope – Work in Progress",
+    "category": "Creative",
+    "description": "Adobe Live streams feature creative professionals using Adobe tools to design, illustrate, and create, providing tutorials and insights into the creative process.",
+    "age-restriction": "All Ages",
+    "link": "streams/avif/DesignScope–WorkInProgress.avif"
+  },
+  {
+    "title": "ArtWave – Global Creative Events",
+    "category": "Creative",
+    "description": "Dribbble Live showcases design professionals as they work on projects, offering a behind-the-scenes look at the design process and creative workflows.",
+    "age-restriction": "All Ages",
+    "link": "streams/avif/ArtWave–GlobalCreativeEvents.avif"
+  },
+  {
+    "title": "StreamGallery – Live Art Journeys",
+    "category": "Creative",
+    "description": "Vimeo Livestream hosts creative events, including art exhibitions, design showcases, and creative workshops, allowing artists to broadcast their work to a global audience.",
+    "age-restriction": "All Ages",
+    "link": "streams/avif/StreamGallery–LiveArtJourneys.avif"
+  },
+    {
+    "title": "ShadowShot",
+    "category": "Gaming",
+    "description": "Michael Grzesiek, known as Shroud, is renowned for his exceptional skills in first-person shooter games like Valorant, CS:GO, and Overwatch 2.",
+    "age-restriction": "16+",
+    "link": "streams/avif/ShadowShot.avif"
+  },
+  {
+    "title": "BladeRush",
+    "category": "Gaming",
+    "description": "Tyler Blevins, aka Ninja, gained fame with Fortnite and is celebrated for his high-energy gameplay and engaging personality.",
+    "age-restriction": "16+",
+    "link": "streams/avif/BladeRush.avif"
+  },
+  {
+    "title": "LunaSniper",
+    "category": "Gaming",
+    "description": "Alia Shelesh, known as SSSniperWolf, combines gaming with lifestyle content, offering a mix of action-packed gameplay and personal vlogs.",
+    "age-restriction": "16+",
+    "link": "streams/avif/LunaSniper.avif"
+  },
+  {
+    "title": "MetaCaster",
+    "category": "Gaming",
+    "description": "Caedrel is a former professional League of Legends player turned content creator, known for his insightful commentary and gameplay.",
+    "age-restriction": "16+",
+    "link": "streams/avif/MetaCaster.avif"
+  },
+  {
+    "title": "RoguePulse",
+    "category": "Gaming",
+    "description": "ZackRawrr is a popular streamer known for his engaging personality and gameplay in titles like Valorant and Apex Legends.",
+    "age-restriction": "16+",
+    "link": "streams/avif/RoguePulse.avif"
+  },
+  {
+    "title": "HyperFlux",
+    "category": "Gaming",
+    "description": "Félix 'xQc' Lengyel is a former Overwatch professional player, now a full-time streamer known for his high-energy streams and diverse game choices.",
+    "age-restriction": "16+",
+    "link": "streams/avif/HyperFlux.avif"
+  },
+  {
+    "title": "EchoGamer",
+    "category": "Gaming",
+    "description": "Imane 'Pokimane' Anys is one of the most prominent female streamers, offering a mix of gaming, variety content, and interactive streams.",
+    "age-restriction": "16+",
+    "link": "streams/avif/EchoGamer.avif"
+  },
+  {
+    "title": "JesterPlay",
+    "category": "Gaming",
+    "description": "Raúl Álvarez Genes, known as Auronplay, is a Spanish streamer famous for his humor and gameplay in titles like GTA V and Rust.",
+    "age-restriction": "16+",
+    "link": "streams/avif/JesterPlay.avif"
+  },
+  {
+    "title": "GlobalWave",
+    "category": "Gaming",
+    "description": "Ibai Llanos is a Spanish streamer and former esports commentator, known for his engaging personality and variety of content.",
+    "age-restriction": "16+",
+    "link": "streams/avif/GlobalWave.avif"
+  },
+  {
+    "title": "CivicStream",
+    "category": "Gaming",
+    "description": "Hasan Piker, known as HasanAbi, is a political commentator and streamer who occasionally delves into gaming content, offering a unique blend of discussions and gameplay.",
+    "age-restriction": "16+",
+    "link": "streams/avif/CivicStream.avif"
+  },
+    {
+    "title": "LifeWithFandy",
+    "category": "IRL",
+    "description": "Twitch streamer Fandy made history by livestreaming the birth of her daughter, Luna, from her living room. The eight-hour broadcast attracted over 50,000 viewers and featured an unexpected message from Twitch CEO Dan Clancy.",
+    "age-restriction": "18+",
+    "link": "streams/avif/LifeWithFandy.avif"
+  },
+  {
+    "title": "SubathonKing",
+    "category": "IRL",
+    "description": "Kai Cenat broke Twitch history by becoming the first-ever streamer to reach over 1 million subscribers during his third subathon event, 'Mafiathon 3'. The event featured surprise guest appearances and aimed to raise funds for a school in Nigeria.",
+    "age-restriction": "16+",
+    "link": "streams/avif/SubathonKing.avif"
+  },
+  {
+    "title": "SweaterWanderer",
+    "category": "IRL",
+    "description": "American streamer SweaterGxd is known for his engaging IRL streams, where he interacts with fans and shares his daily life experiences.",
+    "age-restriction": "16+",
+    "link": "streams/avif/SweaterWanderer.avif"
+  },
+  {
+    "title": "DailyEsfand",
+    "category": "IRL",
+    "description": "Esfand, a founding member of One True King, streams a mix of gaming and IRL content, offering insights into his daily life and interactions with fans.",
+    "age-restriction": "16+",
+    "link": "streams/avif/DailyEsfand.avif"
+  },
+  {
+    "title": "TubboTrails",
+    "category": "IRL",
+    "description": "British streamer Tubbo shares his real-life experiences through engaging IRL streams, interacting with fans and showcasing his adventures.",
+    "age-restriction": "13+",
+    "link": "streams/avif/TubboTrails.avif"
+  },
+  {
+    "title": "VoyageByilhann",
+    "category": "IRL",
+    "description": "French streamer byilhann offers a variety of IRL content, including travel vlogs and daily life streams, engaging with a diverse audience.",
+    "age-restriction": "16+",
+    "link": "streams/avif/VoyageByilhann.avif"
+  },
+  {
+    "title": "BorgorVibes",
+    "category": "IRL",
+    "description": "GoGoBorgor shares his real-life experiences through engaging IRL streams, offering a mix of travel and daily life content.",
+    "age-restriction": "16+",
+    "link": "streams/avif/BorgorVibes.avif"
+  },
+  {
+    "title": "GoofVentures",
+    "category": "IRL",
+    "description": "GoofGuy provides entertaining IRL content, including travel adventures and daily life interactions with his audience.",
+    "age-restriction": "16+",
+    "link": "streams/avif/GoofVentures.avif"
+  },
+  {
+    "title": "CityRay",
+    "category": "IRL",
+    "description": "RayInTheCity offers immersive IRL streams, showcasing city life and engaging with viewers through interactive content.",
+    "age-restriction": "16+",
+    "link": "streams/avif/CityRay.avif"
+  },
+  {
+    "title": "RelicRover",
+    "category": "IRL",
+    "description": "RelicKris shares his real-life experiences through engaging IRL streams, offering a mix of travel and daily life content.",
+    "age-restriction": "16+",
+    "link": "streams/avif/RelicRover.avif"
+  },
+    {
+    "title": "Deep Dive Dialogues",
+    "category": "Talk Shows & Podcasts",
+    "description": "Long-form interviews with comedians, scientists, and public figures, exploring a wide range of topics.",
+    "age-restriction": "18+",
+    "link": "streams/avif/DeepDiveDialogues.avif"
+  },
+  {
+    "title": "The Real Talk Hub",
+    "category": "Talk Shows & Podcasts",
+    "description": "A candid and humorous podcast discussing relationships, mental health, and personal stories.",
+    "age-restriction": "18+",
+    "link": "streams/avif/TheRealTalkHub.avif"
+  },
+  {
+    "title": "Entrepreneur Insights",
+    "category": "Talk Shows & Podcasts",
+    "description": "Steven Bartlett interviews entrepreneurs and thought leaders, delving into their personal journeys and business insights.",
+    "age-restriction": "16+",
+    "link": "streams/avif/EntrepreneurInsights.avif"
+  },
+  {
+    "title": "Offbeat Conversations",
+    "category": "Talk Shows & Podcasts",
+    "description": "Comedian Marc Maron hosts in-depth conversations with fellow comedians and celebrities.",
+    "age-restriction": "18+",
+    "link": "streams/avif/OffbeatConversations.avif"
+  },
+  {
+    "title": "Voices of Change",
+    "category": "Talk Shows & Podcasts",
+    "description": "A feminist podcast from India featuring rants and discussions on societal issues, often with celebrity guests.",
+    "age-restriction": "16+",
+    "link": "streams/avif/VoicesOfChange.avif"
+  },
+  {
+    "title": "Laugh And Life Chronicles",
+    "category": "Talk Shows & Podcasts",
+    "description": "Fashion influencer Paige DeSorbo and comedian Hannah Berner share humorous takes on relationships and personal stories.",
+    "age-restriction": "16+",
+    "link": "streams/avif/LaughAndLifeChronicles.avif"
+  },
+  {
+    "title": "Wedlock And Wit",
+    "category": "Talk Shows & Podcasts",
+    "description": "A British comedy podcast where married couple Chris and Rosie Ramsey discuss life, relationships, and parenting.",
+    "age-restriction": "16+",
+    "link": "streams/avif/Wedlock And Wit.avif"
+  },
+  {
+    "title": "Heart And Humor Stories",
+    "category": "Talk Shows & Podcasts",
+    "description": "Irish presenter Doireann Garrihy shares stories and interviews, blending humor with heartfelt moments.",
+    "age-restriction": "16+",
+    "link": "streams/avif/HeartAndHumorStories.avif"
+  },
+  {
+    "title": "Policy Pulse",
+    "category": "Talk Shows & Podcasts",
+    "description": "UK Green Party leader Zack Polanski discusses political issues with guests from various backgrounds.",
+    "age-restriction": "16+",
+    "link": "streams/avif/PolicyPulse.avif"
+  },
+  {
+    "title": "Roundtable",
+    "category": "Talk Shows & Podcasts",
+    "description": "A lively podcast discussing LGBTQ+ culture, news, and entertainment with humor and insight.",
+    "age-restriction": "16+",
+    "link": "streams/avif/Roundtable.avif"
+  },
+    {
+    "title": "Global Gaming Championship",
+    "category": "Tournaments",
+    "description": "A multi-title global tournament held in Riyadh, featuring top teams across various games like CS2, Dota 2, and Free Fire, with a total prize pool of $70 million.",
+    "age-restriction": "16+",
+    "link": "streams/avif/GlobalGamingChampionship2022.avif"
+  },
+  {
+    "title": "Mobile Battle Royale Showdown",
+    "category": "Tournaments",
+    "description": "The mid-season world tournament for PUBG Mobile, held in Riyadh, with 24 teams competing for a $3.05 million prize pool.",
+    "age-restriction": "16+",
+    "link": "streams/avif/MobileBattleRoyaleShowdown.avif"
+  },
+  {
+    "title": "Legends Clash",
+    "category": "Tournaments",
+    "description": "A unique tournament in Barcelona combining competitive gaming with 1920s Art Deco aesthetics, featuring eight teams led by content creators.",
+    "age-restriction": "16+",
+    "link": "streams/avif/LegendsClash.avif"
+  },
+  {
+    "title": "DreamArena Dallas",
+    "category": "Tournaments",
+    "description": "A major gaming festival featuring IEM Dallas and CDL Major IV, offering over $1 million in prize money and hosting more than 125 exhibitors.",
+    "age-restriction": "All ages",
+    "link": "streams/avif/DreamArenaDallas.avif"
+  },
+  {
+    "title": "Road to Victory Series",
+    "category": "Tournaments",
+    "description": "The official Halo Championship Series competition, featuring weekly online tournaments leading up to the Major #1 Qualifiers.",
+    "age-restriction": "16+",
+    "link": "streams/avif/RoadToVictorySeries.avif"
+  },
+  {
+    "title": "Free Fire International Showdown",
+    "category": "Tournaments",
+    "description": "The largest all-women Fortnite tournament in North America, held during TwitchCon in San Diego, with a $300,000 prize pool.",
+    "age-restriction": "13+",
+    "link": "streams/avif/FreeFireInternationalShowdown.avif"
+  },
+  {
+    "title": "Pokémon Adventure World Cup",
+    "category": "Tournaments",
+    "description": "An international Free Fire tournament in Riyadh, where EVOS Divine from Indonesia claimed the championship title.",
+    "age-restriction": "16+",
+    "link": "streams/avif/PokémonAdventureWorldCup.avif"
+  },
+  {
+    "title": "Global Clash",
+    "category": "Tournaments",
+    "description": "A premier Counter-Strike 2 tournament held in Cologne, Germany, featuring top global teams competing for a significant prize pool.",
+    "age-restriction": "16+",
+    "link": "streams/avif/GlobalClash.avif"
+  }
+]

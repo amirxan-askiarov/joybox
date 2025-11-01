@@ -13,7 +13,7 @@ const TVShows: React.FC = () => {
   const [newReleases, setNewReleases] = useState<TVShow[]>([]);
 
   useEffect(() => {
-    fetch("/public/assets/tv-shows/tv-shows-info.json")
+    fetch("/tv-shows/tv-shows-info.json")
       .then((res) => res.json())
       .then((data: TVShow[]) => {
         setTVShows(data);

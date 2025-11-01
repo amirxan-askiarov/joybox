@@ -1,6 +1,15 @@
-import React, { useState } from "react";
-import styles from "./Header.module.scss";
-import joybloxLogo from "/assets/joybox.png"
+import React, { useState } from 'react';
+import styles from './Header.module.scss';
+
+import joybloxLogoAvif from '/_shared/avif/joybox.avif'
+import joybloxLogoWebp from '/_shared/webp/joybox.webp'
+import joybloxLogoPng from '/_shared/png/joybox.png'
+
+import defaultAvatarAvif from '/_shared/avif/default-avatar.avif'
+import defaultAvatarWebp from '/_shared/webp/default-avatar.webp'
+import defaultAvatarPng from '/_shared/png/default-avatar.png'
+
+
 import SearchBar from "../SearchBar/SearchBar.tsx";
 import useMediaQuery from "../../utils/useMediaQuery.tsx";
 
@@ -18,12 +27,13 @@ const Header: React.FC = () => {
       <nav className={styles.header__nav} aria-label="Main navigation">
       
         <a href="/" className={styles.header__logo} aria-label="JoyBox Home Page">
-          <img
-            src={joybloxLogo}
-            alt="JoyBox official logo"
-            className={styles.header__logoImage}
-            loading="eager" fetchPriority="high"
-          />
+          <picture>
+            <source type="image/avif" srcSet={joybloxLogoAvif} />
+            <source type="image/webp" srcSet={joybloxLogoWebp} />
+            <img src={joybloxLogoPng} alt="JoyBox official logo"
+              className={styles.header__logoImage}
+              loading="eager" fetchPriority="high" />
+          </picture>
         </a>
         
         <button 
@@ -65,12 +75,13 @@ const Header: React.FC = () => {
               title="Profile"
               href="/registration"
             >
-              <img
-                src="/assets/default-avatar.png"
-                alt=""
-                className={styles.header__profileIcon}
-                loading="lazy"
-              />
+              <picture>
+                <source type="image/avif" srcSet={defaultAvatarAvif} />
+                <source type="image/webp" srcSet={defaultAvatarWebp} />
+                <img src={defaultAvatarPng} alt="Your profile avatar"
+                  className={styles.header__profileIcon}
+                  loading="lazy" />
+              </picture>
             </a>
           </div>
 

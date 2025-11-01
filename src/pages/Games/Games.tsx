@@ -11,7 +11,7 @@ const Games: React.FC = () => {
   const [newReleases, setNewReleases] = useState<Game[]>([]);
 
   useEffect(() => {
-    fetch("/assets/games/games-info.json")
+    fetch("/games/games-info.json")
       .then((res) => res.json())
       .then((data: Game[]) => {
         setGames(data);

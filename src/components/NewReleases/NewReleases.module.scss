@@ -171,25 +171,5 @@
       background: var.$categoryBtnColor;
     }
   }
-
-  &__arrow {
-    padding: 0.5rem;
-    opacity: 0.6;
-
-    background: url("../../../public/assets/category-new-releases-arrow-left.svg");
-    border: var.$darkBorder;
-    border-radius: var.$smallBorderRadius;
-    color: var.$textColor;
-    @include mx.transition(opacity);
-
-    &:hover {
-      opacity: 1;
-    }
-
-    &:hover,
-    &:focus {
-      border: 0.1rem solid var.$activeColor;
-    }
-  }
 }
 

@@ -69,12 +69,13 @@ const AllProducts = <T extends Product>({
               {items.map((item, idx) => (
                 <SwiperSlide key={`${item.title} + ${idx}`}>
                   <article className={styles.allProducts__card}>
-                    <img
-                      src={item.link}
-                      alt={item.title}
-                      className={styles.allProducts__image}
-                      loading="lazy"
-                    />
+                    <picture>
+                      <source type="image/avif" srcSet={item.link} />
+                      <source type="image/webp" srcSet={item.link.replace('avif', 'webp')} />
+                      <img src={item.link.replace('avif', 'jpeg')} alt={item.title}
+                        className={styles.allProducts__image}
+                        loading="lazy" />
+                    </picture>
                     <div className={styles.allProducts__content}> 
                       <div className={styles.allProducts__info}>
                         <h3 className={styles.allProducts__productTitle}>

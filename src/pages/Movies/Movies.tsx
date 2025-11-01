@@ -11,7 +11,7 @@ const Movies: React.FC = () => {
   const [newReleases, setNewReleases] = useState<Movie[]>([]);
 
   useEffect(() => {
-    fetch("/public/assets/movies/movies-info.json")
+    fetch("/public/movies/movies-info.json")
       .then((res) => res.json())
       .then((data: Movie[]) => {
         setMovies(data);
