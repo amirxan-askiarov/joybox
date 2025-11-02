@@ -1,16 +1,16 @@
-import '../../../node_modules/swiper/swiper.min.css'; 
-import '../../../node_modules/swiper/modules/navigation.min.css';
-import '../../../node_modules/swiper/modules/pagination.min.css';
-import '../../../node_modules/swiper/modules/effect-fade.min.css';
+import '../../../node_modules/swiper/swiper.min.css'
+import '../../../node_modules/swiper/modules/navigation.min.css'
+import '../../../node_modules/swiper/modules/pagination.min.css'
+import '../../../node_modules/swiper/modules/effect-fade.min.css'
 
-import styles from './NewReleases.module.scss';
+import styles from './NewReleases.module.scss'
 
-import type { Product } from '../../utils/types.tsx';
+import type { Product } from '../../utils/types.tsx'
 
-import useMediaQuery from "../../utils/useMediaQuery.tsx";
+import { useMediaQuery } from '../../utils/helpers.tsx'
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Keyboard, Navigation } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Pagination, Keyboard, Navigation } from 'swiper/modules'
 
 interface NewReleasesProps<T extends Product> {
   products: T[],

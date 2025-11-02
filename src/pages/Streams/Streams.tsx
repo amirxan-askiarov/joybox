@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 import styles from "./Streams.module.scss";
 
-import AllProducts from "../../components/AllProducts/AllProducts.tsx";
+import AllCategories from "../../components/AllCategories/AllCategories.tsx";
 import Header from "../../components/Header/Header.tsx";
 import type { Stream } from "../../utils/types.tsx";
 
@@ -27,7 +27,7 @@ const Streams: React.FC = () => {
       <Header />
       <main className={styles.streams}>
         {streams.length > 0 && categories.length > 0 && (
-          <AllProducts<Stream> products={streams} categories={categories} productsName="streams" />
+          <AllCategories<Stream> products={streams} categories={categories} productsName="streams" />
         )}
       </main>
     </>

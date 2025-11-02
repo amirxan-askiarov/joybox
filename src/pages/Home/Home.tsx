@@ -1,31 +1,31 @@
-import React from "react";
-import styles from "./Home.module.scss";
+import React from 'react'
+import styles from './Home.module.scss'
 
-import Header from "../../components/Header/Header.tsx";
+import Header from '../../components/Header/Header.tsx'
 
-import moviesImgAvif from "/home/avif/movies.avif";
-import tvshowsImgAvif from "/home/avif/tv-shows.avif";
-import streamsImgAvif from "/home/avif/streams.avif";
-import gamesImgAvif from "/home/avif/games.avif";
-import enjoyAndSaveImgAvif from "/home/avif/enjoy-and-save.avif";
-import enjoyEverywhereImgAvif from "/home/avif/enjoy-everywhere.avif";
-import enjoyAnytimeImgAvif from "/home/avif/enjoy-anytime.avif";
+import moviesImgAvif from '/home/avif/movies.avif'
+import tvshowsImgAvif from '/home/avif/tv-shows.avif'
+import streamsImgAvif from '/home/avif/streams.avif'
+import gamesImgAvif from '/home/avif/games.avif'
+import enjoyAndSaveImgAvif from '/home/avif/enjoy-and-save.avif'
+import enjoyEverywhereImgAvif from '/home/avif/enjoy-everywhere.avif'
+import enjoyAnytimeImgAvif from '/home/avif/enjoy-anytime.avif'
 
-import moviesImgWebp from "/home/webp/movies.webp";
-import tvshowsImgWebp from "/home/webp/tv-shows.webp";
-import streamsImgWebp from "/home/webp/streams.webp";
-import gamesImgWebp from "/home/webp/games.webp";
-import enjoyAndSaveImgWebp from "/home/webp/enjoy-and-save.webp";
-import enjoyEverywhereImgWebp from "/home/webp/enjoy-everywhere.webp";
-import enjoyAnytimeImgWebp from "/home/webp/enjoy-anytime.webp";
+import moviesImgWebp from '/home/webp/movies.webp'
+import tvshowsImgWebp from '/home/webp/tv-shows.webp'
+import streamsImgWebp from '/home/webp/streams.webp'
+import gamesImgWebp from '/home/webp/games.webp'
+import enjoyAndSaveImgWebp from '/home/webp/enjoy-and-save.webp'
+import enjoyEverywhereImgWebp from '/home/webp/enjoy-everywhere.webp'
+import enjoyAnytimeImgWebp from '/home/webp/enjoy-anytime.webp'
 
-import moviesImgJpeg from "/home/jpeg/movies.jpeg";
-import tvshowsImgJpeg from "/home/jpeg/tv-shows.jpeg";
-import streamsImgJpeg from "/home/jpeg/streams.jpeg";
-import gamesImgJpeg from "/home/jpeg/games.jpeg";
-import enjoyAndSaveImgJpeg from "/home/jpeg/enjoy-and-save.jpeg";
-import enjoyEverywhereImgJpeg from "/home/jpeg/enjoy-everywhere.jpeg";
-import enjoyAnytimeImgJpeg from "/home/jpeg/enjoy-anytime.jpeg";
+import moviesImgJpeg from '/home/jpeg/movies.jpeg'
+import tvshowsImgJpeg from '/home/jpeg/tv-shows.jpeg'
+import streamsImgJpeg from '/home/jpeg/streams.jpeg'
+import gamesImgJpeg from '/home/jpeg/games.jpeg'
+import enjoyAndSaveImgJpeg from '/home/jpeg/enjoy-and-save.jpeg'
+import enjoyEverywhereImgJpeg from '/home/jpeg/enjoy-everywhere.jpeg'
+import enjoyAnytimeImgJpeg from '/home/jpeg/enjoy-anytime.jpeg'
 
 const Home: React.FC = () => {
   return (

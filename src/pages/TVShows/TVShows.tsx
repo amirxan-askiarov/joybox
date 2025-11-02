@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import styles from "./TVShows.module.scss";
 
 import NewReleases from "../../components/NewReleases/NewReleases.tsx";
-import AllProducts from "../../components/AllProducts/AllProducts.tsx";
+import AllCategories from "../../components/AllCategories/AllCategories.tsx";
 import Header from "../../components/Header/Header.tsx";
 import type { TVShow } from "../../utils/types.tsx";
 
@@ -36,7 +36,7 @@ const TVShows: React.FC = () => {
           <NewReleases<TVShow> products={newReleases} productsName="tv-shows" />
         )}
         {tvShows.length > 0 && categories.length > 0 && (
-          <AllProducts<TVShow> products={tvShows} categories={categories} productsName="tv-shows" />
+          <AllCategories<TVShow> products={tvShows} categories={categories} productsName="tv-shows" />
         )}
       </main>
     </>

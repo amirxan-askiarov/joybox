@@ -1,0 +1,123 @@
+.carousel {
+  height: auto; 
+  width: 100%;
+  z-index: 0;
+  padding-bottom: 3rem;
+}
+
+.card {
+  position: relative;
+  min-height: 30rem; 
+  background-color: var.$containerBgColor;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: var.$darkBoxShadow;
+  transition: transform 0.3s ease;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1; 
+    opacity: 0;
+    @include mx.transition(opacity, height);
+  }
+
+  &:hover {
+    transform: translateY(-0.5rem);
+
+    &::before {
+      height: 100%; 
+      opacity: 1;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    aspect-ratio: 1.4;
+    object-fit: cover;
+    object-position: top center;
+    z-index: 0;
+  }
+
+  &__content {
+    position: absolute;
+    bottom: 0;               
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    justify-content: center; 
+    align-items: flex-end;   
+  }
+
+  &__info {
+    position: relative;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 0.3s ease;
+    padding: 0.75rem;
+    z-index: 3;
+  }
+
+
+  &:hover &__info {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+
+  &__productTitle {
+    font-size: 1.6rem;
+    margin-bottom: 0.25rem;
+    color: var.$textColor;
+  }
+
+  &__age {
+    font-size: 1.3rem;
+    background: #ff0048;
+    color: var.$textColor;
+    padding: 0.15rem 0.4rem;
+    border-radius: 0.3rem;
+  }
+
+  &__description {
+    font-size: 1.3rem;
+    line-height: 1.3;
+    color: var.$textColor;
+    margin: 0.5rem 0;
+  }
+
+  &__btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  &__btn {
+    background: var.$categoryBtnColor;
+    color: var.$textColor;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+
+    cursor: pointer;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+      background: var.$categoryBtnActiveColor;
+    }
+  }
+}
+
+

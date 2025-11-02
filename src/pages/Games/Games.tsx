@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
-import styles from "./Games.module.scss";
-import NewReleases from "../../components/NewReleases/NewReleases.tsx";
-import AllProducts from "../../components/AllProducts/AllProducts.tsx";
-import Header from "../../components/Header/Header.tsx";
-import type { Game } from "../../utils/types.tsx";
+import { useEffect, useState } from 'react'
+import styles from './Games.module.scss'
+import NewReleases from '../../components/NewReleases/NewReleases.tsx'
+import AllCategories from '../../components/AllCategories/AllCategories.tsx'
+import Header from '../../components/Header/Header.tsx'
+import type { Game } from '../../utils/types.tsx'
 
 const Games: React.FC = () => {
   const [games, setGames] = useState<Game[]>([]);
@@ -34,7 +34,7 @@ const Games: React.FC = () => {
           <NewReleases<Game> products={newReleases} productsName="games" />
         )}
         {games.length > 0 && categories.length > 0 && (
-          <AllProducts<Game> products={games} categories={categories} productsName="games" />
+          <AllCategories<Game> products={games} categories={categories} productsName="games" />
         )}
       </main>
     </>

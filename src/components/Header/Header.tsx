@@ -10,8 +10,8 @@ import defaultAvatarWebp from '/_shared/webp/default-avatar.webp'
 import defaultAvatarPng from '/_shared/png/default-avatar.png'
 
 
-import SearchBar from "../SearchBar/SearchBar.tsx";
-import useMediaQuery from "../../utils/useMediaQuery.tsx";
+import SearchBar from '../SearchBar/SearchBar.tsx';
+import { useMediaQuery } from '../../utils/helpers.tsx'
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

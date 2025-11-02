@@ -1,9 +1,11 @@
-import { useEffect, useState } from "react";
-import styles from "./Movies.module.scss";
-import NewReleases from "../../components/NewReleases/NewReleases.tsx";
-import AllProducts from "../../components/AllProducts/AllProducts.tsx";
-import Header from "../../components/Header/Header.tsx";
-import type { Movie } from "../../utils/types.tsx";
+import { useEffect, useState } from 'react'
+
+import styles from './Movies.module.scss'
+
+import NewReleases from '../../components/NewReleases/NewReleases.tsx'
+import AllCategories from '../../components/AllCategories/AllCategories.tsx'
+import Header from '../../components/Header/Header.tsx'
+import type { Movie } from '../../utils/types.tsx'
 
 const Movies: React.FC = () => {
   const [movies, setMovies] = useState<Movie[]>([]);
@@ -11,7 +13,7 @@ const Movies: React.FC = () => {
   const [newReleases, setNewReleases] = useState<Movie[]>([]);
 
   useEffect(() => {
-    fetch("/public/movies/movies-info.json")
+    fetch("/movies/movies-info.json")
       .then((res) => res.json())
       .then((data: Movie[]) => {
         setMovies(data);
@@ -34,7 +36,7 @@ const Movies: React.FC = () => {
           <NewReleases<Movie> products={newReleases} productsName="movies" />
         )}
         {movies.length > 0 && categories.length > 0 && (
-          <AllProducts<Movie> products={movies} categories={categories} productsName="movies" />
+          <AllCategories<Movie> products={movies} categories={categories} productsName="movies" />
         )}
       </main>
     </>
