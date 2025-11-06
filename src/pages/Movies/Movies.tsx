@@ -2,10 +2,13 @@ import { useEffect, useState } from 'react'
 
 import styles from './Movies.module.scss'
 
+import type { Movie } from '../../utils/types.tsx'
+
 import NewReleases from '../../components/NewReleases/NewReleases.tsx'
 import AllCategories from '../../components/AllCategories/AllCategories.tsx'
 import Header from '../../components/Header/Header.tsx'
-import type { Movie } from '../../utils/types.tsx'
+import Footer from '../../components/Footer/Footer.tsx'
+
 
 const Movies: React.FC = () => {
   const [movies, setMovies] = useState<Movie[]>([]);
@@ -39,6 +42,7 @@ const Movies: React.FC = () => {
           <AllCategories<Movie> products={movies} categories={categories} productsName="movies" />
         )}
       </main>
+      <Footer />
     </>
   );
 };

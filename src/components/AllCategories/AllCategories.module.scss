@@ -26,9 +26,11 @@
     text-decoration: none;
     @include mx.transition(color);
 
-    &:hover,
+    &:hover {
+      @include mx.hoverLink;
+    }
     &:focus {
-      color: var.$activeColor;
+      @include mx.focusLink;
     }
   }
 }

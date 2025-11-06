@@ -78,15 +78,16 @@
         
         cursor: pointer;
 
-        transition: background-color 0.3s ease;
+        @include mx.transition(background-color);
         color: var.$textColor;
         font-size: clamp(1.8rem, 2vw, 2rem);
         font-weight: 600;
 
-        &:hover,
+        &:hover {
+          @include mx.hoverBtnPrimary;
+        }
         &:focus {
-          background-color: var.$activeColor;
-          outline: none;
+          @include mx.focusBtnPrimary;
         }
       }
     }

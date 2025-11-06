@@ -12,7 +12,8 @@ import { Navigation, Pagination, Keyboard } from 'swiper/modules'
 
 interface categoryCarouselProps<T extends Product> {
   products: T[];
-  productsName: string;
+  productsName?: string;
+  categoryName?: string;
 }
 
 const swiperBreakpoints = {
@@ -27,7 +28,7 @@ const swiperBreakpoints = {
     slidesToSlide: 2,
   },
   1024: {
-    slidesPerView: 5,
+    slidesPerView: 4,
     spaceBetween: 32,
     slidesToSlide: 3,
   },
@@ -35,18 +36,26 @@ const swiperBreakpoints = {
 
 const CategoryCarousel = <T extends Product>({
   products,
-  productsName
+  productsName,
+  categoryName
 }: categoryCarouselProps<T>) => {
 
   return (
     <Swiper
-      key={productsName} 
+      key={categoryName || productsName} 
       className={styles.carousel}
       modules={[Navigation, Pagination, Keyboard]}
       breakpoints={swiperBreakpoints}
       loop={true}
-      keyboard={{ enabled: true }}
-      navigation={true}
+      keyboard={{ 
+        enabled: true, 
+        onlyInViewport: true,
+        pageUpDown: false
+      }}
+      navigation={{
+        enabled: true
+      }}
+      tabIndex={0}
     >
       {products.map((item) => (
         <SwiperSlide key={item.title}>

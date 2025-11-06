@@ -30,11 +30,18 @@
     background: transparent;
     color: var.$textColor;
 
-    line-height: 2rem; 
+    line-height: 2rem;
     padding: 0.5rem 0.8rem;
 
     &::placeholder {
       color: #ccc;
+    }
+
+    &:hover {
+      @include mx.focusBtnPrimary;
+    }
+    &:focus {
+      @include mx.focusBtnPrimary;
     }
 
     &__Btn {
@@ -43,11 +50,6 @@
       cursor: pointer;
       width: 3rem;
       height: 3rem;
-    }
-
-    &:focus-within {
-      width: 26rem;
-      border-color: var.$activeColor;
     }
 
     @media (max-width: 1023px) {
@@ -62,6 +64,13 @@
   border: none;
   cursor: pointer;
   color: var.$textColor;
+
+  &:hover {
+    @include mx.focusBtnPrimary;
+  }
+  &:focus {
+    @include mx.focusBtnPrimary;
+  }
 
   @media (max-width: 1023px) {
     display: block;
@@ -98,6 +107,15 @@
   font-size: 2rem;
   cursor: pointer;
   color: var.$textColor;
+
+  @include mx.transition(color);
+
+  &:hover {
+    @include mx.hoverLink;
+  }
+  &:focus {
+    @include mx.focusBtnPrimary;
+  }
 }
 
 .searchOverlay__searchInput {

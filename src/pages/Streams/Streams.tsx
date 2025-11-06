@@ -1,10 +1,13 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
-import styles from "./Streams.module.scss";
+import styles from './Streams.module.scss';
 
-import AllCategories from "../../components/AllCategories/AllCategories.tsx";
-import Header from "../../components/Header/Header.tsx";
-import type { Stream } from "../../utils/types.tsx";
+import type { Stream } from '../../utils/types.tsx'
+
+import AllCategories from '../../components/AllCategories/AllCategories.tsx'
+import Header from '../../components/Header/Header.tsx'
+import Footer from '../../components/Footer/Footer.tsx'
+
 
 const Streams: React.FC = () => {
   const [streams, setStreams] = useState<Stream[]>([]);
@@ -30,6 +33,7 @@ const Streams: React.FC = () => {
           <AllCategories<Stream> products={streams} categories={categories} productsName="streams" />
         )}
       </main>
+      <Footer />
     </>
   );
 };

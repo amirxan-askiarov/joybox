@@ -1,23 +1,23 @@
-.results {
+.searchResults {
   min-height: 100vh;
   min-height: 100dvh;
-  h1 {
-    font-size: 3.3em;
-  }
-  padding: 1rem;
+  padding: 3rem 4rem;
+
   background-color: var.$bgColor;
   color: var.$textColor;
+  
   display: flex;
   flex-direction: column;
   gap: 3rem;
   font-family: var.$fontBase;
 
-  @media (min-width: 768px) {
-    padding: 2rem;
+  @media (max-width: 768px) {
+    padding: 3rem 2rem;
   }
 
-  @media (min-width: 1200px) {
-    padding: 3rem 4rem;
+  h1 {
+    font-size: 3.3rem;
+    line-height: 1.2rem;
   }
 
   h2 {

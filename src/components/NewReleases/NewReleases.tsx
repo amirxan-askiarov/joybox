@@ -25,7 +25,6 @@ const NewReleases = <T extends Product>({
 
   const isMobile = useMediaQuery("(max-width: 767px)"); 
   const isInfinite = products.length > 1;
-  const enaBleDots = !isMobile ? { clickable: true } : false;
 
   return (
     <section className={styles.newReleases}>
@@ -38,9 +37,16 @@ const NewReleases = <T extends Product>({
         loop={isInfinite}
         speed={800}
         modules={[Pagination, Keyboard, Navigation]}
-        keyboard={{ enabled: true }} 
-        navigation={true}
-        pagination={enaBleDots}
+        keyboard={{ 
+          enabled: true, 
+          onlyInViewport: true,
+          pageUpDown: false
+         }} 
+        navigation={{
+          enabled: true
+        }}
+        tabIndex={0}
+        pagination={!isMobile}
       >
         {products.map((product, idx) => (
           <SwiperSlide>

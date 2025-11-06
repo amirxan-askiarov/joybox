@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react'
-import { useSearchParams } from 'react-router-dom'
+import { useSearchParams, Navigate } from 'react-router-dom'
 import { useFuzzySearchList } from '@nozbe/microfuzz/react'
+import DOMPurify  from 'dompurify'
 
 import styles from './SearchResults.module.scss'
 
 import Header from '../../components/Header/Header.tsx'
+import Footer from '../../components/Footer/Footer.tsx'
 import CategoryCarousel from '../../components/CategoryCarousel/CategoryCarousel.tsx'
 
 import type { Movie, Game, TVShow, Stream } from '../../utils/types.tsx'
@@ -12,8 +14,13 @@ import type { Movie, Game, TVShow, Stream } from '../../utils/types.tsx'
 
 const SearchResults: React.FC = () => {
   const [searchParams] = useSearchParams();
-  const query = searchParams.get("q") || "";
+
+  const query = searchParams.get("q");
+  if (!query) return <Navigate to='/' replace />
   
+  const safeQuery = DOMPurify.sanitize(query);
+  if (!safeQuery) return <Navigate to='/' replace />
+
   const [movies, setMovies] = useState<Movie[]>([]);
   useEffect(() => {
     fetch("/movies/movies-info.json")
@@ -26,7 +33,7 @@ const SearchResults: React.FC = () => {
 
   const resultsMovies = useFuzzySearchList({
     list: movies,
-    queryText: query,
+    queryText: safeQuery,
     getText: (m: Movie) => [m.title ?? ""],
     mapResultItem: (result) => result.item
   });
@@ -42,7 +49,7 @@ const SearchResults: React.FC = () => {
   }, []);
   const resultsTVShows = useFuzzySearchList({
     list: TVShows,
-    queryText: query,
+    queryText: safeQuery,
     getText: (m: TVShow) => [m.title ?? ""],
     mapResultItem: (result) => result.item
   });
@@ -58,7 +65,7 @@ const SearchResults: React.FC = () => {
   }, []);
   const resultsStreams = useFuzzySearchList({
     list: streams,
-    queryText: query,
+    queryText: safeQuery,
     getText: (m: Stream) => [m.title ?? ""],
     mapResultItem: (result) => result.item
   });
@@ -74,7 +81,7 @@ const SearchResults: React.FC = () => {
   }, []);
   const resultsGames = useFuzzySearchList({
     list: games,
-    queryText: query,
+    queryText: safeQuery,
     getText: (m: Game) => [m.title ?? ""],
     mapResultItem: (result) => result.item
   });
@@ -82,7 +89,7 @@ const SearchResults: React.FC = () => {
   return (
     <>
       <Header />
-      <main className={styles.results}>
+      <main className={styles.searchResults}>
         {
           resultsMovies.length === 0 &&
           resultsTVShows.length === 0 &&
@@ -92,7 +99,6 @@ const SearchResults: React.FC = () => {
               <h1>No movies were found for "{query}"</h1>
             </>
           )
-
         }
         {resultsMovies.length > 0 && (
           <>
@@ -119,6 +125,7 @@ const SearchResults: React.FC = () => {
           </>
         )}
       </main>
+      <Footer />
     </>
   );
 };

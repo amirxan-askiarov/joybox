@@ -39,9 +39,11 @@
     font-size: 1.4rem;
     @include mx.transition(color);
 
-    &:hover,
+    &:hover {
+      @include mx.hoverLink;
+    }
     &:focus {
-      @include mx.linkActive(var.$activeColor);
+      @include mx.focusLink;
     }
   }
 }

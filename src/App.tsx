@@ -1,8 +1,6 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 
-import Footer from './components/Footer/Footer.tsx'
-
 import Home from './pages/Home/Home.tsx'
 import Movies from './pages/Movies/Movies.tsx'
 import TVShows from './pages/TVShows/TVShows.tsx'
@@ -25,7 +23,6 @@ const App: React.FC = () => {
         <Route path="/search" element={<SearchResults />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-      <Footer />
     </>
   );
 };

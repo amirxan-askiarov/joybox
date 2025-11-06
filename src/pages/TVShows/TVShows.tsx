@@ -1,11 +1,14 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react'
 
-import styles from "./TVShows.module.scss";
+import styles from './TVShows.module.scss'
 
-import NewReleases from "../../components/NewReleases/NewReleases.tsx";
-import AllCategories from "../../components/AllCategories/AllCategories.tsx";
-import Header from "../../components/Header/Header.tsx";
-import type { TVShow } from "../../utils/types.tsx";
+import type { TVShow } from '../../utils/types.tsx'
+
+import NewReleases from '../../components/NewReleases/NewReleases.tsx'
+import AllCategories from '../../components/AllCategories/AllCategories.tsx'
+import Header from '../../components/Header/Header.tsx'
+import Footer from '../../components/Footer/Footer.tsx'
+
 
 const TVShows: React.FC = () => {
   const [tvShows, setTVShows] = useState<TVShow[]>([]);
@@ -39,6 +42,7 @@ const TVShows: React.FC = () => {
           <AllCategories<TVShow> products={tvShows} categories={categories} productsName="tv-shows" />
         )}
       </main>
+      <Footer />
     </>
   );
 };

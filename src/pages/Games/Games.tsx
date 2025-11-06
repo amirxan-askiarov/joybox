@@ -1,9 +1,13 @@
 import { useEffect, useState } from 'react'
 import styles from './Games.module.scss'
+
+import type { Game } from '../../utils/types.tsx'
+
 import NewReleases from '../../components/NewReleases/NewReleases.tsx'
 import AllCategories from '../../components/AllCategories/AllCategories.tsx'
+import Footer from '../../components/Footer/Footer.tsx'
 import Header from '../../components/Header/Header.tsx'
-import type { Game } from '../../utils/types.tsx'
+
 
 const Games: React.FC = () => {
   const [games, setGames] = useState<Game[]>([]);
@@ -37,6 +41,7 @@ const Games: React.FC = () => {
           <AllCategories<Game> products={games} categories={categories} productsName="games" />
         )}
       </main>
+      <Footer />
     </>
   );
 };

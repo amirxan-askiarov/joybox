@@ -26,15 +26,17 @@ const AllCategories = <T extends Product>({
         if (items.length === 0) return null;
 
         return (
-          <div key={cat} className={styles.allCategories__category}>
-            <div className={styles.allCategories__header}>
-              <h2 className={styles.allCategories__title}>{cat}</h2>
-              <a href="" className={styles.allCategories__seeMore}>
-                See more →
-              </a>
+          <>
+            <div key={cat} className={styles.allCategories__category}>
+              <div className={styles.allCategories__header}>
+                <h2 className={styles.allCategories__title}>{cat}</h2>
+                <a href="" className={styles.allCategories__seeMore}>
+                  See more →
+                </a>
+              </div>
+              <CategoryCarousel products={items} productsName={productsName} categoryName={cat} />
             </div>
-            <CategoryCarousel products={items} productsName={productsName} />
-          </div>
+          </>
         );
       })}
     </section>

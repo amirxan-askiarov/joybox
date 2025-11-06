@@ -85,10 +85,11 @@
     color: var.$textColor;
     font-size: 1.4rem;
 
+    &:hover {
+      @include mx.hoverInput;
+    }
     &:focus {
-      border-color: var.$primaryColor;
-      box-shadow: 0 0 0 0.2rem var.$activeColor;
-      outline: none;
+      @include mx.focusInput;
     }
   }
 
@@ -103,9 +104,13 @@
     font-weight: 600;
     cursor: pointer;
 
-    &:hover,
+    @include mx.transition(background-color);
+
+    &:hover {
+      @include mx.hoverBtnPrimary;
+    }
     &:focus {
-      background-color: var.$activeColor;
+      @include mx.focusBtnPrimary;
     }
   }
 
@@ -135,10 +140,13 @@
       cursor: pointer;
       font-size: 1.3rem;
 
-      &:hover,
+      @include mx.transition(background-color);
+
+      &:hover {
+        @include mx.hoverBtnPrimary;
+      }
       &:focus {
-        background-color: var.$activeColor;
-        border-color: var.$primaryColor;
+        @include mx.focusBtnPrimary;
       }
 
       img {
@@ -148,3 +156,72 @@
     }
   }
 }
+.modalOverlay {
+  width: 100%;
+  height: 100%;
+  @include mx.overlay;
+
+  &__modalContainer {
+    z-index: inherit;
+    position: fixed;
+    top: 50dvh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: grid;
+    grid-template-columns: 8rem 1fr;
+    justify-items: center;
+    align-content: center;
+    text-align: center;
+    width: 22rem;
+    height: 9rem;
+    padding: 0.75rem;
+
+    border-radius: var.$mediumBorderRadius;
+    border-color: var.$darkBorderColor;
+    background-color: var.$containerBgColor;
+    color: var.$textColor;
+
+    @media (max-width: 768px) {
+      height: 7rem;
+    }
+
+    &__icon {
+      width: 5rem;
+      height: 5rem;
+      justify-self: end;
+
+      animation: spin 2s linear;
+
+      &_success {
+        width: 5rem;
+        height: 5rem;
+        animation: none;
+      }
+
+      @keyframes spin {
+        from { transform: rotate(0deg);}
+        to   { transform: rotate(360deg);}
+      }
+    }
+
+    &__text {
+      justify-self: start;
+      align-self: center;
+
+      font-weight: 600;
+
+      @media (max-width: 768px) {
+        justify-self: center;
+      }
+
+      &_success {
+        align-self: center;
+        justify-self: start;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+
