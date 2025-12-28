@@ -1,23 +1,22 @@
-import '../../../node_modules/swiper/swiper.min.css'
-import '../../../node_modules/swiper/modules/navigation.min.css'
-import '../../../node_modules/swiper/modules/pagination.min.css'
-import '../../../node_modules/swiper/modules/effect-fade.min.css'
+import "../../../node_modules/swiper/swiper.min.css";
+import "../../../node_modules/swiper/modules/navigation.min.css";
+import "../../../node_modules/swiper/modules/pagination.min.css";
+import "../../../node_modules/swiper/modules/effect-fade.min.css";
 
-import styles from './CategoryCarousel.module.scss'
-import type { Product } from '../../utils/types.tsx'
+import styles from "./CategoryCarousel.module.scss";
+import type { MediaItemProcessed, MediaItemType } from "../../utils/types.tsx";
 
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation, Pagination, Keyboard } from 'swiper/modules'
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Keyboard } from "swiper/modules";
 
-
-interface categoryCarouselProps<T extends Product> {
-  products: T[];
-  productsName?: string;
-  categoryName?: string;
+interface categoryCarouselProps {
+  mediaItems: MediaItemProcessed[];
+  mediaItemType?: MediaItemType;
+  category?: string;
 }
 
 const swiperBreakpoints = {
-  0: { 
+  0: {
     slidesPerView: 2,
     spaceBetween: 16,
     slidesToSlide: 2,
@@ -34,58 +33,66 @@ const swiperBreakpoints = {
   },
 };
 
-const CategoryCarousel = <T extends Product>({
-  products,
-  productsName,
-  categoryName
-}: categoryCarouselProps<T>) => {
-
+const CategoryCarousel: React.FC<categoryCarouselProps> = ({
+  mediaItems,
+  mediaItemType,
+  category,
+}) => {
   return (
     <Swiper
-      key={categoryName || productsName} 
+      key={`${category}-${mediaItemType}`}
       className={styles.carousel}
       modules={[Navigation, Pagination, Keyboard]}
       breakpoints={swiperBreakpoints}
       loop={true}
-      keyboard={{ 
-        enabled: true, 
-        onlyInViewport: true,
-        pageUpDown: false
-      }}
-      navigation={{
-        enabled: true
-      }}
+      keyboard={{ enabled: true, onlyInViewport: true }}
+      navigation={{ enabled: true }}
       tabIndex={0}
     >
-      {products.map((item) => (
-        <SwiperSlide key={item.title}>
+      {mediaItems.map((mediaItem) => (
+        <SwiperSlide
+          key={`${category}-${mediaItem.title}`}
+          role="group"
+          aria-label={`${mediaItem.title} slide`}
+        >
           <article className={styles.card}>
             <picture>
-              <source type="image/avif" srcSet={item.link} />
-              <source type="image/webp" srcSet={item.link.replace('avif', 'webp')} />
-              <img src={item.link.replace('avif', 'jpeg')} alt={item.title}
+              <source type="image/avif" srcSet={mediaItem.links.avif} />
+              <source type="image/webp" srcSet={mediaItem.links.webp} />
+              <img
+                src={mediaItem.links.jpeg}
+                alt={mediaItem.title}
                 className={styles.card__image}
-                loading="lazy" />
+                loading="lazy"
+              />
             </picture>
-            <div className={styles.card__content}> 
+            <div className={styles.card__content}>
               <div className={styles.card__info}>
-                <h3 className={styles.card__productTitle}>
-                  {item.title}
+                <h3 className={styles.card__mediaItemTitle}>
+                  {mediaItem.title}
                 </h3>
                 <span className={styles.card__age}>
-                  {item["age-restriction"]}
+                  {mediaItem["age-restriction"]}
                 </span>
                 <p className={styles.card__description}>
-                  {item.description}
+                  {mediaItem.description}
                 </p>
                 <div className={styles.card__btns}>
                   <button className={styles.card__btn}>
-                    {productsName === "games" ? "Start Playing" : "Start Watching"}
+                    {mediaItemType === "Online Games"
+                      ? "Start Playing"
+                      : "Start Watching"}
                   </button>
-                  <button className={styles.card__btn}>
+                  <button
+                    className={styles.card__btn}
+                    aria-label={`Add ${mediaItem.title} to favourites`}
+                  >
                     Add to Favourites
                   </button>
-                  <button className={styles.card__btn}>
+                  <button
+                    className={styles.card__btn}
+                    aria-label={`About ${mediaItem.title}`}
+                  >
                     About
                   </button>
                 </div>
@@ -96,6 +103,6 @@ const CategoryCarousel = <T extends Product>({
       ))}
     </Swiper>
   );
-}
+};
 
 export default CategoryCarousel;

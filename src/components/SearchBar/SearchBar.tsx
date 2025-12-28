@@ -1,34 +1,46 @@
-import { useState } from 'react'
-import { useMediaQuery } from '../../utils/helpers.tsx'
-import { useNavigate } from 'react-router-dom'
+import { useState } from "react";
+import { useMediaQuery } from "../../utils/helpers.tsx";
+import { useNavigate } from "react-router-dom";
 
-import styles from './SearchBar.module.scss'
+import styles from "./SearchBar.module.scss";
 
-import { FocusTrap } from 'focus-trap-react'
+import { FocusTrap } from "focus-trap-react";
+
+import DOMPurify from "dompurify";
 
 const SearchBar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const toggleSearchBar = () => setIsOpen((prev) => !prev)
-  const [input, setInput] = useState('')
-  const redirect = useNavigate()
 
-  const isDesktop = useMediaQuery("(min-width: 1024px)")
+  const toggleSearchBar = () => setIsOpen((prev) => !prev);
 
-  const handleInput = (e: React.FormEvent<HTMLInputElement>) => setInput(e.currentTarget.value)
+  const [input, setInput] = useState("");
+
+  const redirect = useNavigate();
+
+  const isDesktop = useMediaQuery("(min-width: 1024px)");
+
+  const handleInput = (e: React.FormEvent<HTMLInputElement>) =>
+    setInput(e.currentTarget.value);
   const handleSearch = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter" && input.trim() !== '') {
-      redirect(`/search?q=${encodeURIComponent(input.trim())}`);
+    if (e.key === "Enter" && input.trim() !== "") {
+      const sanitizedInput = DOMPurify.sanitize(input.trim());
+      redirect(`/search?q=${encodeURIComponent(sanitizedInput)}`);
       if (!isDesktop && isOpen) toggleSearchBar();
     }
-  }
+  };
 
   return (
-    <> 
+    <>
       {isDesktop && (
         <div className={styles.searchDesktop}>
-          <input type="search" placeholder="Search title..." aria-label="Search" 
-          onInput={handleInput} onKeyDown={handleSearch}
-          className={styles.searchDesktop_input} />
+          <input
+            type="search"
+            placeholder="Search title..."
+            aria-label="Search"
+            onChange={handleInput}
+            onKeyDown={handleSearch}
+            className={styles.searchDesktop_input}
+          />
         </div>
       )}
       <div className={styles.searchBar}>
@@ -43,9 +55,9 @@ const SearchBar: React.FC = () => {
         )}
         {!isDesktop && isOpen && (
           <FocusTrap
-            active={!isDesktop && isOpen}
+            active={isOpen}
             focusTrapOptions={{
-              initialFocus: '#search'
+              initialFocus: "#search",
             }}
           >
             <div className={styles.searchOverlay}>
@@ -58,16 +70,24 @@ const SearchBar: React.FC = () => {
                   ✖
                 </button>
                 <div className={styles.searchOverlay__searchInput}>
-                  <span className={styles.icon}>🔍</span>
-                  <input id="search" type="search" placeholder="Search title..." autoFocus 
-                  onInput={handleInput} onKeyDown={handleSearch} />
+                  <span className={styles.icon} aria-hidden="true">
+                    🔍
+                  </span>
+                  <input
+                    id="search"
+                    type="search"
+                    placeholder="Search title..."
+                    autoFocus
+                    onChange={handleInput}
+                    onKeyDown={handleSearch}
+                  />
                 </div>
               </div>
             </div>
           </FocusTrap>
         )}
       </div>
-    </>  
+    </>
   );
 };
 

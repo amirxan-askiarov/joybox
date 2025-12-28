@@ -1,14 +1,14 @@
-import React from 'react'
-import { Routes, Route } from 'react-router-dom'
+import React from "react";
+import { Routes, Route } from "react-router-dom";
 
-import Home from './pages/Home/Home.tsx'
-import Movies from './pages/Movies/Movies.tsx'
-import TVShows from './pages/TVShows/TVShows.tsx'
-import Streams from './pages/Streams/Streams.tsx'
-import Games from './pages/Games/Games.tsx'
-import Registration from './pages/Registration/Registration.tsx'
-import SearchResults from './pages/SearchResults/SearchResults.tsx'
-import NotFound from './pages/NotFound/NotFound.tsx'
+import Home from "./pages/Home/Home.tsx";
+import Movies from "./pages/Movies/Movies.tsx";
+import TVShows from "./pages/TVShows/TVShows.tsx";
+import Streams from "./pages/Streams/Streams.tsx";
+import Games from "./pages/Games/Games.tsx";
+import Registration from "./pages/Registration/Registration.tsx";
+import SearchResults from "./pages/SearchResults/SearchResults.tsx";
+import NotFound from "./pages/NotFound/NotFound.tsx";
 
 const App: React.FC = () => {
   return (

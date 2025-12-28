@@ -1,37 +1,37 @@
-import React from 'react'
-import { useState, useRef } from 'react'
+import React from "react";
+import { useState, useRef } from "react";
 
-import styles from './Registration.module.scss'
+import styles from "./Registration.module.scss";
 
-import Footer from '../../components/Footer/Footer.tsx'
+import Footer from "../../components/Footer/Footer.tsx";
 
-import googleIcon from '/registration/svg/google-logo.svg'
-import metaIcon from '/registration/svg/meta-logo.png'
-import appleIcon from '/registration/svg/apple-logo.svg'
+import googleIcon from "/registration/svg/google-logo.svg";
+import metaIcon from "/registration/svg/meta-logo.png";
+import appleIcon from "/registration/svg/apple-logo.svg";
 
-import joybloxIconWebp from '/_shared/webp/joybox-icon.webp'
-import joybloxIconPng from '/_shared/png/joybox-icon.png'
+import joybloxIconWebp from "/_shared/webp/joybox-icon.webp";
+import joybloxIconPng from "/_shared/png/joybox-icon.png";
 
-type ModalStatus = 'idle' | 'registration' | 'success'
+type ModalStatus = "idle" | "registration" | "success";
 
 const Registration: React.FC = () => {
-  const [status, setStatus] = useState<ModalStatus>('idle');
+  const [status, setStatus] = useState<ModalStatus>("idle");
   const formRef = useRef<HTMLFormElement>(null);
+
+  const sleep = (ms: number) => new Promise((res) => setTimeout(res, ms));
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const form = formRef.current;
     if (!form) return;
 
-    setStatus('registration');
+    setStatus("registration");
+    await sleep(2000);
 
-    await new Promise((resolve) => setTimeout(resolve, 2000));
-    setStatus('success');
+    setStatus("success");
+    await sleep(2000);
 
-    setTimeout(() => {
-      setStatus('idle');
-    }, 2000);
-
+    setStatus("idle");
     form.reset();
   };
 
@@ -42,15 +42,19 @@ const Registration: React.FC = () => {
           <div className={styles.register__background}></div>
 
           <section className={styles.register__formSection}>
-            <h1 className={styles.register__title}>Create Your JoyBox Account</h1>
+            <h1 className={styles.register__title}>
+              Create Your JoyBox Account
+            </h1>
             <p className={styles.register__subtitle}>
               Sign up to start your JoyBox!
             </p>
-            
-            <form ref={formRef}
-            className={styles.register__form} 
-            aria-label="Registration form on JoyBox"
-            onSubmit={handleSubmit}>
+
+            <form
+              ref={formRef}
+              className={styles.register__form}
+              aria-label="Registration form on JoyBox"
+              onSubmit={handleSubmit}
+            >
               <div className={styles.register__field}>
                 <label htmlFor="email" className={styles.register__label}>
                   Email
@@ -62,7 +66,7 @@ const Registration: React.FC = () => {
                   placeholder="Enter your email"
                   required
                   className={styles.register__input}
-                  autoComplete='email'
+                  autoComplete="email"
                 />
               </div>
 
@@ -96,7 +100,10 @@ const Registration: React.FC = () => {
               </div>
 
               <div className={styles.register__field}>
-                <label htmlFor="repeatPassword" className={styles.register__label}>
+                <label
+                  htmlFor="repeatPassword"
+                  className={styles.register__label}
+                >
                   Repeat Password
                 </label>
                 <input
@@ -116,13 +123,22 @@ const Registration: React.FC = () => {
             <div className={styles.register__social}>
               <p>Or sign up with:</p>
               <div className={styles.register__socialBtns}>
-                <button className={styles.register__socialBtn} onClick={handleSubmit}>
+                <button
+                  className={styles.register__socialBtn}
+                  onClick={handleSubmit}
+                >
                   <img src={googleIcon} alt="Google" loading="lazy" /> Google
                 </button>
-                <button className={styles.register__socialBtn} onClick={handleSubmit}>
+                <button
+                  className={styles.register__socialBtn}
+                  onClick={handleSubmit}
+                >
                   <img src={metaIcon} alt="Meta account" loading="lazy" /> Meta
                 </button>
-                <button className={styles.register__socialBtn} onClick={handleSubmit}>
+                <button
+                  className={styles.register__socialBtn}
+                  onClick={handleSubmit}
+                >
                   <img src={appleIcon} alt="Apple Mail" loading="lazy" /> Apple
                 </button>
               </div>
@@ -131,27 +147,39 @@ const Registration: React.FC = () => {
         </div>
       </main>
       <Footer />
-      {(status === 'registration' || status === 'success') && (
+      {status !== "idle" && (
         <div className={styles.modalOverlay}>
           <div className={styles.modalOverlay__modalContainer}>
-            {(status === 'registration' || status === 'success') && (
-              <>
-                <picture>
-                  <source type="image/webp" srcSet={joybloxIconWebp} />
-                  <img src={joybloxIconPng} alt="JoyBox official logo"
-                    className={
-                      status === 'registration' ? styles.modalOverlay__modalContainer__icon :
-                      status === 'success' ? styles.modalOverlay__modalContainer__icon_success :
-                      styles.modalOverlay__modalContainer__icon
-                    }
-                    loading="eager" fetchPriority="high" />
-                </picture>
-                {status === 'registration' && 
-                <p className={styles.modalOverlay__modalContainer__text}>Registration…</p>}
-                {status === 'success' && 
-                <p className={styles.modalOverlay__modalContainer__text_success}>Success!</p>}
-              </>
-              )}
+            <picture>
+              <source type="image/webp" srcSet={joybloxIconWebp} />
+              <img
+                src={joybloxIconPng}
+                alt="JoyBox official logo"
+                className={
+                  status === "registration"
+                    ? styles.modalOverlay__modalContainer__icon
+                    : status === "success"
+                      ? styles["modalOverlay__modalContainer__icon--success"]
+                      : styles.modalOverlay__modalContainer__icon
+                }
+                loading="eager"
+                fetchPriority="high"
+              />
+            </picture>
+            {status === "registration" && (
+              <p className={styles.modalOverlay__modalContainer__text}>
+                Registration…
+              </p>
+            )}
+            {status === "success" && (
+              <p
+                className={
+                  styles["modalOverlay__modalContainer__text--success"]
+                }
+              >
+                Success!
+              </p>
+            )}
           </div>
         </div>
       )}

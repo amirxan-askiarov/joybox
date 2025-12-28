@@ -1,11 +1,11 @@
-.searchResults {
+.mainContainer {
   min-height: 100vh;
   min-height: 100dvh;
   padding: 3rem 4rem;
 
   background-color: var.$bgColor;
   color: var.$textColor;
-  
+
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -17,7 +17,6 @@
 
   h1 {
     font-size: 3.3rem;
-    line-height: 1.2rem;
   }
 
   h2 {

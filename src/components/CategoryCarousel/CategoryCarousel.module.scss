@@ -15,7 +15,7 @@
   transition: transform 0.3s ease;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
@@ -50,7 +50,7 @@
 
   &__content {
     position: absolute;
-    bottom: 0;              
+    bottom: 0;
     left: 0;
     width: 100%;
     z-index: 2;
@@ -69,15 +69,13 @@
     z-index: 3;
   }
 
-
   &:hover &__info {
     display: block;
     opacity: 1;
     transform: translateY(0);
   }
 
-
-  &__productTitle {
+  &__mediaItemTitle {
     font-size: 1.6rem;
     margin-bottom: 0.25rem;
     color: var.$textColor;
@@ -119,7 +117,9 @@
     &:focus {
       background: var.$categoryBtnActiveColor;
     }
+
+    &[aria-hidden="true"] {
+      pointer-events: none;
+    }
   }
 }
-
-

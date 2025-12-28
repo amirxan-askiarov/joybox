@@ -1,62 +1,62 @@
-@use 'sass:list';
-@use './_variables.scss' as var;
+@use "sass:list";
+@use "./_variables.scss" as var;
 
 @mixin linkActive($color) {
-    color: $color;
-    outline: none;
+  color: $color;
+  outline: none;
 }
 
 @mixin transition($effects...) {
-    $transition-list: ();
+  $transition-list: ();
 
-    @each $effect in $effects {
-        $eff: ($effect 0.3s ease);
-        $transition-list: list.append($transition-list, $eff, $separator: comma);
-    }
+  @each $effect in $effects {
+    $eff: ($effect 0.3s ease);
+    $transition-list: list.append($transition-list, $eff, $separator: comma);
+  }
 
-    transition: $transition-list;
+  transition: $transition-list;
 }
 
 @mixin overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 10
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10;
 }
 
 @mixin hoverInput {
-    background-color: var.$containerBgColor;
+  background-color: var.$containerBgColor;
 }
 
 @mixin focusInput {
-    outline-offset: 0.3rem;
-    outline: 0.2rem solid var.$primaryColor;
+  outline-offset: 0.3rem;
+  outline: 0.2rem solid var.$primaryColor;
 }
 
 @mixin hoverBtnPrimary {
-    background-color: var.$activeColor;
+  background-color: var.$activeColor;
 }
 
 @mixin focusBtnPrimary {
-    outline-offset: 0.3rem;
-    outline: 0.2rem solid var.$primaryColor;
+  outline-offset: 0.3rem;
+  outline: 0.2rem solid var.$primaryColor;
 }
 
 @mixin hoverLink {
-    color: var.$primaryColor;
+  color: var.$primaryColor;
 }
 
 @mixin focusLink {
-    outline-offset: 0.3rem;
-    outline: 0.2rem solid var.$primaryColor;
+  outline-offset: 0.3rem;
+  outline: 0.2rem solid var.$primaryColor;
 }
 
 @mixin hoverBtnCategory {
-    background-color: var.$categoryBtnActiveColor;
+  background-color: var.$categoryBtnActiveColor;
 }
 
 @mixin focusBtnCategory {
-    outline-offset: 0.3rem;
-    outline: 0.2rem solid #ff0048;
-    box-shadow: 0.2rem outset #ff7e00;
+  outline-offset: 0.3rem;
+  outline: 0.2rem solid #ff0048;
+  box-shadow: 0.2rem outset #ff7e00;
 }

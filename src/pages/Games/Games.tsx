@@ -1,50 +1,11 @@
-import { useEffect, useState } from 'react'
-import styles from './Games.module.scss'
+import type { MediaItemType } from "../../utils/types.tsx";
 
-import type { Game } from '../../utils/types.tsx'
+import MediaTypeLayout from "../../layouts/MediaTypeLayout/MediaTypeLayout.tsx";
 
-import NewReleases from '../../components/NewReleases/NewReleases.tsx'
-import AllCategories from '../../components/AllCategories/AllCategories.tsx'
-import Footer from '../../components/Footer/Footer.tsx'
-import Header from '../../components/Header/Header.tsx'
+const mediaItemsType: MediaItemType = "Online Games";
 
-
-const Games: React.FC = () => {
-  const [games, setGames] = useState<Game[]>([]);
-  const [categories, setCategories] = useState<string[]>([]);
-  const [newReleases, setNewReleases] = useState<Game[]>([]);
-
-  useEffect(() => {
-    fetch("/games/games-info.json")
-      .then((res) => res.json())
-      .then((data: Game[]) => {
-        setGames(data);
-
-        const gameCategories = Array.from(new Set(data.map((g) => g.category)));
-        setCategories(gameCategories);
-
-        const numReleased = Math.floor(Math.random() * 3) + 1;
-        const startIndex = Math.floor(Math.random() * (data.length - numReleased));
-        setNewReleases(data.slice(startIndex, startIndex + numReleased));
-      })
-      .catch((err) => console.error("Error loading games:", err));
-  }, []);
-
-  return (
-    <>
-      <Header />
-      <main className={styles.games}>
-        {newReleases.length > 0 && (
-          <NewReleases<Game> products={newReleases} productsName="games" />
-        )}
-        {games.length > 0 && categories.length > 0 && (
-          <AllCategories<Game> products={games} categories={categories} productsName="games" />
-        )}
-      </main>
-      <Footer />
-    </>
-  );
-};
+const Games: React.FC = () => (
+  <MediaTypeLayout mediaItemsType={mediaItemsType} />
+);
 
 export default Games;
-

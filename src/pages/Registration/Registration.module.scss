@@ -19,10 +19,10 @@
     background-repeat: no-repeat;
     background-position: center;
 
-    background-image: url("../../registration/jpeg/joybox-background.jpeg");
+    background-image: url("../../../public/registration/jpeg/joybox-background.jpeg");
     background-image: image-set(
-      url("../../registration/avif/joybox-background.avif") type("image/avif"),
-      url("../../registration/webp/joybox-background.webp") type("image/webp")
+      url("../../../public/registration/avif/joybox-background.avif") type("image/avif"),
+      url("../../../public/registration/webp/joybox-background.webp") type("image/webp")
     );
 
     @media (max-width: 767px) {
@@ -193,15 +193,19 @@
 
       animation: spin 2s linear;
 
-      &_success {
+      &--success {
         width: 5rem;
         height: 5rem;
         animation: none;
       }
 
       @keyframes spin {
-        from { transform: rotate(0deg);}
-        to   { transform: rotate(360deg);}
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
       }
     }
 
@@ -215,7 +219,7 @@
         justify-self: center;
       }
 
-      &_success {
+      &--success {
         align-self: center;
         justify-self: start;
         font-weight: 600;
@@ -223,5 +227,3 @@
     }
   }
 }
-
-

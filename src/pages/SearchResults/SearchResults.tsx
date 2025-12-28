@@ -1,129 +1,110 @@
-import { useEffect, useState } from 'react'
-import { useSearchParams, Navigate } from 'react-router-dom'
-import { useFuzzySearchList } from '@nozbe/microfuzz/react'
-import DOMPurify  from 'dompurify'
+import { useSearchParams, Navigate } from "react-router-dom";
+import { useFuzzySearchList } from "@nozbe/microfuzz/react";
+import { useMemo } from "react";
+import DOMPurify from "dompurify";
 
-import styles from './SearchResults.module.scss'
+import styles from "./SearchResults.module.scss";
 
-import Header from '../../components/Header/Header.tsx'
-import Footer from '../../components/Footer/Footer.tsx'
-import CategoryCarousel from '../../components/CategoryCarousel/CategoryCarousel.tsx'
+import NoResults from "../../layouts/NoResults/NoResults.tsx";
+import Error from "../../layouts/Error/Error.tsx";
+import Loading from "../../layouts/Loading/Loading.tsx";
 
-import type { Movie, Game, TVShow, Stream } from '../../utils/types.tsx'
+import Header from "../../components/Header/Header.tsx";
+import Footer from "../../components/Footer/Footer.tsx";
+import CategoryCarousel from "../../components/CategoryCarousel/CategoryCarousel.tsx";
 
+import type {
+  MediaItem,
+  MediaItemProcessed,
+  MediaItemsByType,
+  MediaItemType,
+} from "../../utils/types.tsx";
+import { mediaItemsMetaData } from "../../config/mediaMetaData.config.ts";
+import { useFetchOnInit } from "../../utils/helpers.tsx";
 
 const SearchResults: React.FC = () => {
   const [searchParams] = useSearchParams();
+  const query = searchParams.get("q") || "";
+  const safeQuery = DOMPurify.sanitize(query).trim();
 
-  const query = searchParams.get("q");
-  if (!query) return <Navigate to='/' replace />
-  
-  const safeQuery = DOMPurify.sanitize(query);
-  if (!safeQuery) return <Navigate to='/' replace />
+  const metaData = useMemo(() => mediaItemsMetaData, []);
 
-  const [movies, setMovies] = useState<Movie[]>([]);
-  useEffect(() => {
-    fetch("/movies/movies-info.json")
-      .then((res) => res.json())
-      .then((data: Movie[]) => {
-        setMovies(data ?? [])
-      })
-      .catch((err) => console.error("Error loading movies:", err));
-  }, []);
+  const movies = useFetchOnInit<MediaItem>(mediaItemsMetaData.Movies.url);
+  const tvShows = useFetchOnInit<MediaItem>(mediaItemsMetaData["TV Shows"].url);
+  const streams = useFetchOnInit<MediaItem>(mediaItemsMetaData.Streams.url);
+  const games = useFetchOnInit<MediaItem>(
+    mediaItemsMetaData["Online Games"].url,
+  );
+  const dataSetsProcessed = useMemo<MediaItemProcessed[]>(() => {
+    return [
+      ...movies.data,
+      ...tvShows.data,
+      ...streams.data,
+      ...games.data,
+    ].map(({ link, ...rest }) => ({
+      ...rest,
+      links: {
+        avif: link,
+        webp: link.replace("avif", "webp"),
+        jpeg: link.replace("avif", "jpeg"),
+      },
+    }));
+  }, [movies.data, tvShows.data, streams.data, games.data]);
 
-  const resultsMovies = useFuzzySearchList({
-    list: movies,
+  const results = useFuzzySearchList({
+    list: dataSetsProcessed,
     queryText: safeQuery,
-    getText: (m: Movie) => [m.title ?? ""],
-    mapResultItem: (result) => result.item
+    getText: (item) => [item.title],
+    mapResultItem: (r) => r.item,
   });
 
-  const [TVShows, setTVShows] = useState<TVShow[]>([]);
-  useEffect(() => {
-    fetch("/tv-shows/tv-shows-info.json")
-      .then((res) => res.json())
-      .then((data: TVShow[]) => {
-        setTVShows(data ?? [])
-      })
-      .catch((err) => console.error("Error loading TV Shows:", err));
-  }, []);
-  const resultsTVShows = useFuzzySearchList({
-    list: TVShows,
-    queryText: safeQuery,
-    getText: (m: TVShow) => [m.title ?? ""],
-    mapResultItem: (result) => result.item
-  });
+  const resultsByType = useMemo<MediaItemsByType>(() => {
+    const grouped: MediaItemsByType = {};
 
-  const [streams, setStreams] = useState<Stream[]>([]);
-  useEffect(() => {
-    fetch("/streams/streams-info.json")
-      .then((res) => res.json())
-      .then((data: Stream[]) => {
-        setStreams(data ?? [])
-      })
-      .catch((err) => console.error("Error loading streams:", err));
-  }, []);
-  const resultsStreams = useFuzzySearchList({
-    list: streams,
-    queryText: safeQuery,
-    getText: (m: Stream) => [m.title ?? ""],
-    mapResultItem: (result) => result.item
-  });
+    for (const item of results) {
+      const type = item.type;
+      if (!grouped[type]) grouped[type] = [];
+      grouped[type]!.push(item);
+    }
 
-  const [games, setGames] = useState<Game[]>([]);
-  useEffect(() => {
-    fetch("/games/games-info.json")
-      .then((res) => res.json())
-      .then((data: Game[]) => {
-        setGames(data ?? [])
-      })
-      .catch((err) => console.error("Error loading games:", err));
-  }, []);
-  const resultsGames = useFuzzySearchList({
-    list: games,
-    queryText: safeQuery,
-    getText: (m: Game) => [m.title ?? ""],
-    mapResultItem: (result) => result.item
-  });
+    return grouped;
+  }, [results]);
+
+  if (!safeQuery) return <Navigate to="/" replace />;
+
+  if (!metaData)
+    return <Error pageTitle={`Error: The metadata was not configured.`} />;
+
+  const error = movies.error || tvShows.error || streams.error || games.error;
+  if (error)
+    return <Error pageTitle={`Error: The was not fetched. Info: ${error}`} />;
+
+  const dataIsLoading =
+    movies.loading || tvShows.loading || streams.loading || games.loading;
+  if (dataIsLoading)
+    return <Loading pageTitle={`search results for ${query}`} />;
+
+  const noResults = results.length === 0;
+  if (!dataIsLoading && noResults)
+    return <NoResults pageTitle={`"${query}"`} />;
 
   return (
     <>
       <Header />
-      <main className={styles.searchResults}>
-        {
-          resultsMovies.length === 0 &&
-          resultsTVShows.length === 0 &&
-          resultsStreams.length === 0 &&
-          resultsGames.length === 0 && (
-            <>
-              <h1>No movies were found for "{query}"</h1>
-            </>
-          )
-        }
-        {resultsMovies.length > 0 && (
-          <>
-            <h2>Movies found for "{query}":</h2>
-            <CategoryCarousel products={resultsMovies} productsName="movies" />
-          </>
-        )}
-        {resultsTVShows.length > 0 && (
-          <>
-            <h2>TV Shows found for "{query}":</h2>
-            <CategoryCarousel products={resultsTVShows} productsName="tv-shows" />
-          </>
-        )}
-        {resultsStreams.length > 0 && (
-          <>
-            <h2>Streams found for "{query}":</h2>
-            <CategoryCarousel products={resultsStreams} productsName="streams" />
-          </>
-        )}
-        {resultsGames.length > 0 && (
-          <>
-            <h2>Online games found for "{query}":</h2>
-            <CategoryCarousel products={resultsGames} productsName="games" />
-          </>
-        )}
+      <main className={styles.mainContainer}>
+        {Object.entries(resultsByType).map(([key, items]) => {
+          if (!items) return null;
+          const mediaType = key as MediaItemType;
+
+          return (
+            <section key={key}>
+              <h2>
+                {mediaType} found for "{query}":
+              </h2>
+              <CategoryCarousel mediaItems={items} mediaItemType={mediaType} />
+            </section>
+          );
+        })}
       </main>
       <Footer />
     </>

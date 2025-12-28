@@ -1,12 +1,12 @@
 :global {
   .swiper-button-prev,
   .swiper-button-next {
-    &:hover, 
+    &:hover,
     &:focus {
       outline: 0.2rem solid #ff669f;
     }
   }
-  .swiper-pagination-bullet:hover, 
+  .swiper-pagination-bullet:hover,
   .swiper-pagination-bullet:focus {
     outline-offset: 0.3rem;
     outline: 0.2rem solid #ff669f;
@@ -14,17 +14,15 @@
 }
 
 :root {
-    --swiper-navigation-color: #ff3b7f;
-    --swiper-navigation-size: 2.5rem;
-    --swiper-pagination-color: #ff669f;
+  --swiper-navigation-color: #ff3b7f;
+  --swiper-navigation-size: 2.5rem;
+  --swiper-pagination-color: #ff669f;
 }
-
 
 .newReleases {
   position: relative;
   color: var.$textColor;
   padding: 3rem;
-
 
   &__title {
     margin-bottom: 2rem;
@@ -67,12 +65,12 @@
         opacity: 1;
         max-height: 20rem;
       }
-      
+
       &::before {
         height: clamp(15vh, 23vh, 28vh);
         opacity: 1;
       }
-      
+
       .newReleases__info {
         opacity: 1;
         transform: translateY(0);
@@ -81,17 +79,17 @@
   }
 
   &__image {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: top center;
-      z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    z-index: 0;
   }
 
-&__info {
+  &__info {
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -181,4 +179,3 @@
     }
   }
 }
-
